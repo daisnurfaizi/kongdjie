@@ -28,9 +28,10 @@ class Admin extends Controller
     public function Datatable()
     {
         $data['judul'] = 'Admin';
+        $data['produk'] = $this->model('Product_model')->getprodukall();
 
         $this->view('Admin/header/header');
-        $this->view('Admin/pages/tables/data.php');
+        $this->view('Admin/pages/tables/data', $data);
         $this->view('Admin/footer/footer');
     }
     public function page()

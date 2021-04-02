@@ -50,7 +50,7 @@
 <script src="<?= BASEURL, PORT, LOCATION; ?>/dist/js/pages/dashboard.js"></script>
 <script src="<?= BASEURL, PORT, LOCATION; ?>/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src=".<?= BASEURL, PORT, LOCATION; ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?= BASEURL, PORT, LOCATION; ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="<?= BASEURL, PORT, LOCATION; ?>/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= BASEURL, PORT, LOCATION; ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
