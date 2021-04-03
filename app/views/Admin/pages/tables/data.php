@@ -24,6 +24,7 @@
                     <th>Deskripsi</th>
                     <th>Harga</th>
                     <th>Image</th>
+                    <th>link Online Shop</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -44,6 +45,9 @@
                       <td>
                         <?= $produk['gambar'] ?>
                       </td>
+                      <td>
+                        <?= $produk['link'] ?>
+                      </td>
                     </tr>
                   <?php
                   endforeach;
@@ -56,6 +60,7 @@
                     <th>Deskripsi</th>
                     <th>Harga</th>
                     <th>Image</th>
+                    <th>link Online Shop</th>
                   </tr>
 
                 </tfoot>

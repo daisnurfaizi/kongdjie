@@ -12,7 +12,7 @@ class Admin extends Controller
         $data['judul'] = 'Admin';
 
         $this->view('Admin/header/header');
-        $this->view('Admin/index');
+        $this->view('Admin/index3');
         $this->view('Admin/footer/footer');
     }
 
@@ -20,9 +20,10 @@ class Admin extends Controller
     {
 
         $data['judul'] = 'Admin';
+        $data['wilayah'] = $this->model('Product_model')->getWilayah();
 
         $this->view('Admin/header/header');
-        $this->view('Admin/pages/forms/general');
+        $this->view('Admin/pages/forms/general', $data);
         $this->view('Admin/footer/footer');
     }
     public function Datatable()
@@ -45,5 +46,53 @@ class Admin extends Controller
         $this->view('templates/header', $data);
         $this->view('about/page');
         $this->view('templates/footer');
+    }
+
+    public function TambahProduk()
+    {
+        if ($this->model('Product_model')->InputProduk($_POST) > 0) {
+            Flasher::setFlash('berhasil', ' ditambah ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'ditambah', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
+            exit();
+        }
+    }
+
+    function uplad()
+    {
+        $namafile = $_FILES['gambar']['name'];
+        $ukuranfile = $_FILES['gambar']['size'];
+        $error = $_FILES['gambar']['error'];
+        $tmpName = $_FILES['gambar']['tmp_name'];
+        // cek apakah ada gambar yg di upload
+        if ($error === 4) {
+            echo 'pilih gambar dahulu';
+            return false;
+        }
+        $extensifilevalid = ['jpg', 'jpeg', 'png'];
+        $extensigambar = explode('.', $namafile);
+        $extensigambar = strtolower(end($extensigambar));
+
+        if (!in_array($extensigambar, $extensifilevalid)) {
+            $error = 'yang anda upload bukan gambar';
+            // $result = json_encode($error, true);
+            echo $error;
+            // echo $result;
+            return false;
+        }
+
+        if ($ukuranfile > 3000000) {
+            echo "gambar terlalu besar";
+            return false;
+        }
+        //upload data
+        $namafilebaru = uniqid();
+        $namafilebaru .= '.';
+        $namafilebaru .= $extensigambar;
+        move_uploaded_file($tmpName, BASEURL . PORT . LOCATION, '/img' . $namafilebaru);
+        return $namafilebaru;
     }
 }
