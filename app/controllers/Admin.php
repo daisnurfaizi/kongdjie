@@ -15,6 +15,7 @@ class Admin extends Controller
         $this->view('Admin/index3');
         $this->view('Admin/footer/footer');
     }
+    
 
     public function inputform()
     {
