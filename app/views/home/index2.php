@@ -63,43 +63,35 @@
         </div>
       </div>
     </section>
-    <!-- Akhir Jumbotron Header-->
 
-    <!-- Jumbotron Profile -->
+    <!-- Profile  -->
     <section class="isi" id="profile">
-      <div class="container-satu">
-        <div class="abot">
-          <p> Kong Djie Coffee merupakan usaha kopi yang berdiri sejak 1943 yang berlokasi  di TanjungPandan , Belitung. Saat ini Kong Djie di dukung lebih 100 outlet cafe dan resto.  Kong Djie berkomitmen untukselalu memenuhi kebutuhan dan kepuasan konsumen,  tidak hanya dengan menyediakan produk dengan kualitasterbaik, namun juga memberikan solusi yang tepat bagi setiap pangsa pasar kami. </p>
-          
-          <a href="" class="btn view_detail"> View Details </a>
+      <div class="row about">
+        <div class="col">
+          <p> Kong Djie Coffee merupakan usaha kopi yang  berdiri sejak 1943 yang berlokasi  di Tanjung  Pandan , Belitung. Saat ini Kong Djie di dukung  lebih 100 outlet cafe dan resto.  Kong Djie  berkomitmen untuk selalu memenuhi kebutuhan dan  kepuasan konsumen,  tidak hanya dengan   menyediakan produk dengan kualitas terbaik,   namun juga memberikan solusi yang tepat bagi  setiap pangsa pasar kami. </p>
+          <a href="" class="btn viewdetail"> View Detail </a>
         </div>
-        <div class="imageprof">
-          <img src="<?= BASEURL, PORT, LOCATION; ?>/img/gawean1.png">
-        </div> 
+        <div class="col">
+          <img src="<?= BASEURL, PORT, LOCATION; ?>/img/gawean1.png" alt="viewdetail">
+        </div>
       </div>
-      
-        <!-- <div class="teksvisi">
-          <h3> Visi & Misi </h3>
+      <div class="teks">
+        <h3> Visi & Misi </h3>
+      </div>
+      <div class="visimisi">
+        <div class="visi">
+          <p> MENJADI PERUSAHAAN TERBAIK YANG MAMPU   MEMBERIKAN RASA YANG BERKUALITAS  </p>
         </div>
-        
-        <div class="contenvisimisi">
-          <div class="visi">
-            <p> menjadi perusahaan terbaik yang mampu memberikan rasa yang berkualitas </p>
-          </div>
-          <div class="misi">
-            <p><a href=""> manajemen dengan integritas tinggi </a></p>
-            <p><a href=""> mampu memperoleh laba yang baik </a></p>
-            <p><a href=""> pengabdian untuk relasi dan konsumen </a></p>
-            <p><a href=""> inovasi tanpa henti </a></p>
-            <p><a href=""> standar etika yang tinggi </a></p>
-          </div>
-        </div> -->
-  
-        <!-- <div class="ornamenabot">
-          <img src="img/bijay coffe menu prodile.png">
-        </div>  -->
-    <!-- </section> -->
-    <!-- Akhir Jumbotron Profile -->
+        <div class="misi">
+          <p><a href=""> MANAJEMEN DENGAN INTEGRITAS   TINGGI </a></p>  
+          <p><a href=""> MAMPU MEMPEROLEH LABA YANG BAIK   </a></p>  
+          <p><a href=""> PENGABDIAN UNTUK RELASI DAN   KONSUMEN </a></p>  
+          <p><a href=""> INOVASI TANPA HENTI </a></p>  
+          <p><a href=""> STANDAR ETIKA YANG TINGGI </a></p>
+        </div>           
+      </div>
+      <img src="<?= BASEURL, PORT, LOCATION; ?>/img/bijay coffe menu prodile.png" id="ornamen2">
+    </section>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
