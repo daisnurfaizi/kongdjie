@@ -24,6 +24,7 @@
                     <th>Deskripsi</th>
                     <th>Harga</th>
                     <th>Image</th>
+                    <th>link Online Shop</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -42,7 +43,10 @@
                         <?= $produk['harga'] ?>
                       </td>
                       <td>
-                        <?= $produk['gambar'] ?>
+                        <img src="<?= BASEURL, LOCATION, PORT ?>/img/<?= $produk['gambar'] ?>" alt="" style="width: 50px; height: 50px;">
+                      </td>
+                      <td>
+                        <?= $produk['link'] ?>
                       </td>
                     </tr>
                   <?php
@@ -56,6 +60,7 @@
                     <th>Deskripsi</th>
                     <th>Harga</th>
                     <th>Image</th>
+                    <th>link Online Shop</th>
                   </tr>
 
                 </tfoot>

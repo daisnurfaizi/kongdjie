@@ -16,4 +16,10 @@ class Home extends Controller
         $this->view('home/Beranda', $data);
         $this->view('templates/footer');
     }
+
+    public function Produk()
+    {
+        $data['produk'] = $this->model('Product_model')->getprodukall();
+        $this->view('home/Produk', $data);
+    }
 }

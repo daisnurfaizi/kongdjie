@@ -1,0 +1,52 @@
+img {
+  width: 170px;
+  height: auto;
+}
+.card-title {
+  text-align: center;
+}
+.card-text {
+  text-align: center;
+}
+.card-deskripsi {
+  text-align: justify;
+}
+.card {
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.card-body {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 5px;
+}
+.card-bg {
+  padding: 10px;
+  background-color: #9d5a06;
+  color: white;
+}
+.box {
+  background-color: white;
+  border-radius: 5px;
+  padding: -50px;
+}
+#wa {
+  width: 35px;
+  height: auto;
+}
+#toko {
+  width: 35px;
+  height: auto;
+}
+#sh {
+  width: 55px;
+  height: auto;
+}
+#bl {
+  margin-left: -10px;
+  width: 55px;
+  height: auto;
+}
