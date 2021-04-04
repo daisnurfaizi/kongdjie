@@ -69,7 +69,24 @@
       <div class="row about">
         <div class="col">
           <p> Kong Djie Coffee merupakan usaha kopi yang  berdiri sejak 1943 yang berlokasi  di Tanjung  Pandan , Belitung. Saat ini Kong Djie di dukung  lebih 100 outlet cafe dan resto.  Kong Djie  berkomitmen untuk selalu memenuhi kebutuhan dan  kepuasan konsumen,  tidak hanya dengan   menyediakan produk dengan kualitas terbaik,   namun juga memberikan solusi yang tepat bagi  setiap pangsa pasar kami. </p>
-          <a href="" class="btn viewdetail"> View Detail </a>
+          <a href="" class="btn viewdetail" data-toggle="modal" data-target="#mymodal"> View Detail </a>
+          <div class="modal" id='mymodal'>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Sejarah KongDjie Coffee</h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">Kong Djie Coffee merupakan usaha kopi yang berdiri sejak 1943 yang berlokasi di Tanjung Pandan , Belitung. Kong djie coffee yang di awali berbentuk kedai kopi yang hingga saat ini berubah menjadi cafe dan resto di setiap Kota Besar di Indonesia. Saat ini Kong Djie di dukung lebih 100 outlet cafe dan resto. <br><br>
+                Dan pada Tahun 2021 dengan memperluas usaha nya, Kong Djie meramba usahanya di sektor Retail dan Distribusi dengan mendirikan CV.Kong Djie Hamparan Rasa. Kong Djie berkomitmen untuk selalu memenuhi kebutuhan dan kepuasan konsumen, tidak hanya dengan menyediakan produk dengan kualitas terbaik, namun juga memberikan solusi yang tepat bagi setiap pangsa pasar kami. <br><br>
+                Dengan pengalaman yang cukup mumpuni Kong Djie telah memiliki kepekaan untuk memberikan Kualitas dan rasa atas setiap kebutuhan konsumen yang terus berkembang. Pengetahuan ini membuat kami mampu untuk memberikan solusi yang tepat bagi mitra kami dalam memenuhi keinginan konsumen yang semakin kompleks. <br><br>
+                Seluruh Produk kami terjamin keamanan dan mutunya karena sebelum beredar telah diperiksa dan didaftarkan ke Balai Pengawasan Obat dan Makanan (BPOM).
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col">
           <img src="<?= BASEURL, PORT, LOCATION; ?>/img/gawean1.png" alt="viewdetail">
