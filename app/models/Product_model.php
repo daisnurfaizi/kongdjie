@@ -35,10 +35,11 @@ class Product_model
     // upload
     function upload($gambar)
     {
-        $namafile = $_FILES['gambar']['name'];
-        $ukuranfile = $_FILES['gambar']['size'];
-        $error = $_FILES['gambar']['error'];
-        $tmpName = $_FILES['gambar']['tmp_name'];
+        // var_dump($gambar);
+        $namafile = $gambar['gambar']['name'];
+        $ukuranfile = $gambar['gambar']['size'];
+        $error = $gambar['gambar']['error'];
+        $tmpName = $gambar['gambar']['tmp_name'];
         // cek apakah ada gambar yg di upload
         if ($error === 4) {
             echo 'pilih gambar dahulu';
@@ -64,12 +65,13 @@ class Product_model
         $namafilebaru = uniqid();
         $namafilebaru .= '.';
         $namafilebaru .= $extensigambar;
-        move_uploaded_file($tmpName, BASEURL . PORT . LOCATION, '/img' . $namafilebaru);
+        move_uploaded_file($tmpName,  $_SERVER["DOCUMENT_ROOT"] . LOCATION . '/img/' . $namafilebaru);
         return $namafilebaru;
     }
-    public function Inputproduk($data)
+    public function Inputproduk($data, $gambar)
     {
-        $datagambar = $this->upload($data['gambar']);
+        // var_dump($gambar);
+        $datagambar = $this->upload($gambar);
         $query = ("INSERT into product (nama_produk,deskripsi,harga,gambar,link) values (:nama_produk,:deskripsi,:harga,:gambar,:link)");
         $this->db->query($query);
         $this->db->bind('nama_produk', $data['nama_produk']);
@@ -104,5 +106,13 @@ class Product_model
         $this->db->bind('id', $data['id']);
         $this->db->execute();
         return $this->db->RowCount();
+    }
+
+    public function jumlahproduk()
+    {
+        $query = "SELECT COUNT(id) FROM product";
+        $this->db->query($query);
+        $this->db->execute();
+        return $this->db->resultSet();
     }
 }

@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <div class="container-fluid">
   <!-- Small boxes (Stat box) -->
   <div class="row">
@@ -5,9 +7,12 @@
       <!-- small box -->
       <div class="small-box bg-info">
         <div class="inner">
-          <h3>150</h3>
+          <?php
+          // var_dump($data);
+          ?>
+          <h3><?= $data['jumlahproduk'][0]['COUNT(id)'] ?></h3>
 
-          <p>Jumblah Produk</p>
+          <p>Total Produk</p>
         </div>
         <div class="icon">
           <i class="ion ion-bag"></i>
@@ -89,3 +94,63 @@
   </div>
   <!-- /.row (main row) -->
 </div><!-- /.container-fluid -->
+<script>
+  var alamat = <?= BASEURL, PORT, LOCATION ?>
+  $(document).ready(function() {
+
+    // sembunyikan form kabupaten, kecamatan dan desa
+    $("#form_kab").hide();
+    $("#form_kec").hide();
+    $("#form_des").hide();
+
+    // ambil data kabupaten ketika data memilih provinsi
+    $('body').on("change", "#form_prov", function() {
+      var id = $(this).val();
+      var data = "id=" + id + "&data=kabupaten";
+      $.ajax({
+        type: 'POST',
+        url: "get_daerah.php",
+        data: data,
+        success: function(hasil) {
+          $("#form_kab").html(hasil);
+          $("#form_kab").show();
+          $("#form_kec").hide();
+          $("#form_des").hide();
+        }
+      });
+    });
+
+    // ambil data kecamatan/kota ketika data memilih kabupaten
+    $('body').on("change", "#form_kab", function() {
+      var id = $(this).val();
+      var data = "id=" + id + "&data=kecamatan";
+      $.ajax({
+        type: 'POST',
+        url: "get_daerah.php",
+        data: data,
+        success: function(hasil) {
+          $("#form_kec").html(hasil);
+          $("#form_kec").show();
+          $("#form_des").hide();
+        }
+      });
+    });
+
+    // ambil data desa ketika data memilih kecamatan/kota
+    $('body').on("change", "#form_kec", function() {
+      var id = $(this).val();
+      var data = "id=" + id + "&data=desa";
+      $.ajax({
+        type: 'POST',
+        url: "get_daerah.php",
+        data: data,
+        success: function(hasil) {
+          $("#form_des").html(hasil);
+          $("#form_des").show();
+        }
+      });
+    });
+
+
+  });
+</script>

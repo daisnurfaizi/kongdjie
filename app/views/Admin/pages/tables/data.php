@@ -43,7 +43,7 @@
                         <?= $produk['harga'] ?>
                       </td>
                       <td>
-                        <?= $produk['gambar'] ?>
+                        <img src="<?= BASEURL, LOCATION, PORT ?>/img/<?= $produk['gambar'] ?>" alt="" style="width: 50px; height: 50px;">
                       </td>
                       <td>
                         <?= $produk['link'] ?>
