@@ -24,11 +24,8 @@
               <label for="exampleInputFile">Gambar</label>
               <div class="input-group">
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="exampleInputFile">
+                  <input type="file" class="custom-file-input" id="exampleInputFile" name="gambar">
                   <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                  <span class="input-group-text">Upload</span>
                 </div>
               </div>
             </div>
@@ -140,7 +137,6 @@
 <!-- Page specific script -->
 <script>
   $(document).ready(function() {
-
     // sembunyikan form kabupaten, kecamatan dan desa
     $("#form_kab").hide();
     $("#form_kec").hide();

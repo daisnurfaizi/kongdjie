@@ -10,12 +10,12 @@ class Admin extends Controller
     public function adminpage()
     {
         $data['judul'] = 'Admin';
-
+        $data['jumlahproduk'] = $this->model('Product_model')->jumlahproduk();
         $this->view('Admin/header/header');
-        $this->view('Admin/index3');
+        $this->view('Admin/index', $data);
         $this->view('Admin/footer/footer');
     }
-    
+
 
     public function inputform()
     {
@@ -51,7 +51,10 @@ class Admin extends Controller
 
     public function TambahProduk()
     {
-        if ($this->model('Product_model')->InputProduk($_POST) > 0) {
+        // var_dump($_POST);
+        // var_dump($_FILES);
+        // $this->model('Product_model')->InputProduk($_POST, $_FILES);
+        if ($this->model('Product_model')->InputProduk($_POST, $_FILES) > 0) {
             Flasher::setFlash('berhasil', ' ditambah ', 'alert-success');
             header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
             exit();
