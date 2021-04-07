@@ -3,6 +3,7 @@
     <!-- left column -->
     <div class="col-md-6">
       <?php Flasher::flash() ?>
+
       <!-- general form elements -->
       <div class="card card-primary">
         <div class="card-header">
@@ -14,24 +15,24 @@
           <div class="card-body">
             <div class="form-group">
               <label for="exampleInputEmail1">Nama Produk</label>
-              <input type="text" class="form-control" id="exampleInputEmail" placeholder="Nama Produk" name="nama_produk">
+              <input type="text" class="form-control" id="exampleInputEmail" placeholder="Nama Produk" name="nama_produk" required>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Harga</label>
-              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Harga" name="harga">
+              <input type="number" required class="form-control" id="exampleInputPassword1" placeholder="Harga" name="harga">
             </div>
             <div class="form-group">
               <label for="exampleInputFile">Gambar</label>
               <div class="input-group">
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="exampleInputFile" name="gambar">
+                  <input type="file" required class="custom-file-input" id="exampleInputFile" name="gambar">
                   <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                 </div>
               </div>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Deskripsi</label>
-              <textarea name="deskripsi" id="deskripsi" class="form-control"></textarea>
+              <textarea name="deskripsi" required id="deskripsi" class="form-control"></textarea>
               <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
             </div>
             <div class="form-group">
@@ -47,6 +48,7 @@
           </div>
         </form>
       </div>
+
       <!-- /.card -->
 
       <!-- general form elements -->
