@@ -115,4 +115,14 @@ class Product_model
         $this->db->execute();
         return $this->db->resultSet();
     }
+    // delete produk
+    public function Deleteproduk($id)
+    {
+        $query = "DELETE FROM product where id = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+        //echo var_dump($id);
+        $this->db->execute();
+        return $this->db->RowCount();
+    }
 }

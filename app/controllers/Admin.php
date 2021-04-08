@@ -48,6 +48,23 @@ class Admin extends Controller
         $this->view('about/page');
         $this->view('templates/footer');
     }
+    // dalete produk
+    public function delete($id)
+    {
+        if ($this->model('Product_model')->Deleteproduk($id) > 0) {
+            Flasher::setFlash('berhasil', ' dihapus ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Datatable');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'dihapus', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Datatable');
+            exit();
+        }
+    }
+
+
+
+
 
     public function TambahProduk()
     {
