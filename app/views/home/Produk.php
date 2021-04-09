@@ -18,6 +18,19 @@
 </head>
 
 <body style="background: #3D2120;">
+<?php
+$perpage = 10;
+if(isset($_GET['page'])){
+  $page = $_GET['page'];
+}else{
+  $page = 1;
+}
+if($page > 1){
+  $start = ($page* $perpage) - $perpage;
+}else{
+  $start = 0;
+}
+?>
   <div class="logatas">
     <img src="<?= BASEURL, PORT, LOCATION; ?>/img/logo.png">
     <p>Product</p>
@@ -68,10 +81,14 @@
   <div class="container">
     <div class="row">
       <?php
+      $dataproduk = count($data['produk']);
+      $halaman = ceil($dataproduk/$perpage);
+      // var_dump($dataproduk);
       foreach ($data['produk'] as $produk) {
       ?>
+      
         <!-- <div class="row"> -->
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="card">
             <div class="card-body">
               <div class="card-bg">
