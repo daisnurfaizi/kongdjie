@@ -19,12 +19,16 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>Rendering engine</th>
+                    <!-- <th>Rendering engine</th> -->
                     <th>Nama Produk</th>
                     <th>Deskripsi</th>
                     <th>Harga</th>
                     <th>Image</th>
-                    <th>link Online Shop</th>
+                    <th>link tokopedia</th>
+                    <th>link bukalapak</th>
+                    <th>link shoppe</th>
+                    <!-- <th>link whatsapp</th> -->
+                    <th>link aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -32,7 +36,7 @@
                   foreach ($data['produk'] as $produk) :
                   ?>
                     <tr>
-                      <td>Trident</td>
+                      <!-- <td>Trident</td> -->
                       <td>
                         <?= $produk['nama_produk'] ?>
                       </td>
@@ -48,6 +52,19 @@
                       <td>
                         <?= $produk['link'] ?>
                       </td>
+                      <td>
+                        <?= $produk['link'] ?>
+                      </td>
+                      <td>
+                        <?= $produk['link'] ?>
+                      </td>
+                      <td>
+                        <a href="" class="btn btn-primary">Update</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                      </td>
+                      <!-- <td>
+                        <?= $produk['link'] ?>
+                      </td> -->
                     </tr>
                   <?php
                   endforeach;
@@ -55,12 +72,16 @@
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th>Rendering engine</th>
+                    <!-- <th>Rendering engine</th> -->
                     <th>Nama Produk</th>
                     <th>Deskripsi</th>
                     <th>Harga</th>
                     <th>Image</th>
-                    <th>link Online Shop</th>
+                    <th>link tokopedia</th>
+                    <th>link bukalapak</th>
+                    <th>link shoppe</th>
+                    <!-- <th>link whatsapp</th> -->
+                    <th>link aksi</th>
                   </tr>
 
                 </tfoot>
