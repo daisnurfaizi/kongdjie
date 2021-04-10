@@ -11,6 +11,7 @@ class Admin extends Controller
     {
         $data['judul'] = 'Admin';
         $data['jumlahproduk'] = $this->model('Product_model')->jumlahproduk();
+        $data['jumlahtoko'] = $this->model('Frencise_model')->jumlahtoko();
         $this->view('Admin/header/header');
         $this->view('Admin/index', $data);
         $this->view('Admin/footer/footer');
@@ -38,14 +39,15 @@ class Admin extends Controller
         $this->view('Admin/pages/tables/data', $data);
         $this->view('Admin/footer/footer');
     }
-
+    // data fanchise
     public function Franchise()
     {
         $data['judul'] = 'Franchise';
-        $data['produk'] = $this->model('Product_model')->getprodukall();
+        $data['Franchise'] = $this->model('Frencise_model')->Franchiseall();
+        $data['wilayah'] = $this->model('Product_model')->getWilayah();
 
         $this->view('Admin/header/header');
-        $this->view('Admin/pages/tables/data', $data);
+        $this->view('Admin/pages/tables/datatoko', $data);
         $this->view('Admin/footer/footer');
     }
     public function page()
@@ -164,5 +166,32 @@ class Admin extends Controller
     public function kecamatan()
     {
         $data['kecamatan'] = $this->model('Wilayah_model')->kecamatan($_POST);
+    }
+
+    public function deletefrenchise($id)
+    {
+        if ($this->model('Frencise_model')->Deletetoko($id) > 0) {
+            Flasher::setFlash('berhasil', ' dihapus ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Franchise');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'dihapus', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Franchise');
+            exit();
+        }
+    }
+
+    public function ubahtoko()
+    {
+        // var_dump($_POST);
+        if ($this->model('Frencise_model')->updatetoko($_POST) > 0) {
+            Flasher::setFlash('berhasil', ' Diupdate ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Franchise');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'update', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Franchise');
+            exit();
+        }
     }
 }

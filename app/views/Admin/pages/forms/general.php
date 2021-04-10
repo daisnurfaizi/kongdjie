@@ -39,6 +39,21 @@
               <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
             </div>
             <div class="form-group">
+              <label for="exampleInputPassword1">Tokopedia</label>
+              <textarea name="tokopedia" id="tokopedia" class="form-control"></textarea>
+              <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Shoppe</label>
+              <textarea name="shoppe" id="shoppe" class="form-control"></textarea>
+              <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Bukalapak</label>
+              <textarea name="bukalapak" id="bukalapak" class="form-control"></textarea>
+              <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
+            </div>
+            <div class="form-group">
               <label for="exampleInputPassword1">Link</label>
               <textarea name="link" id="link" class="form-control"></textarea>
               <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->

@@ -31,7 +31,7 @@
                   <th>link tokopedia</th>
                   <th>link bukalapak</th>
                   <th>link shoppe</th>
-                  <!-- <th>link whatsapp</th> -->
+                  <th>link whatsapp</th>
                   <th>link aksi</th>
                 </tr>
               </thead>
@@ -54,16 +54,43 @@
                       <img src="<?= BASEURL, LOCATION, PORT ?>/img/<?= $produk['gambar'] ?>" alt="" style="width: 50px; height: 50px;">
                     </td>
                     <td>
-                      <?= $produk['link'] ?>
+                      <?php
+                      if (!empty($produk['tokopedia'])) {
+                      ?>
+                        <a href="<?= $produk['tokopedia'] ?>">Link tokopedia</a>
+                      <?php
+                      }
+                      ?>
                     </td>
                     <td>
-                      <?= $produk['link'] ?>
+                      <?php
+                      if (!empty($produk['shoppe'])) {
+                      ?>
+                        <a href="<?= $produk['shoppe'] ?>">Link shoppe</a>
+                      <?php
+                      }
+                      ?>
                     </td>
                     <td>
-                      <?= $produk['link'] ?>
+                      <?php
+                      if (!empty($produk['bukalapak'])) {
+                      ?>
+                        <a href="<?= $produk['bukalapak'] ?>">Link bukalapak</a>
+                      <?php
+                      }
+                      ?>
                     </td>
                     <td>
-                      <button id="updatedata" type="button" class="badge badge-primary float-lg-left mr-1" data-idproduk="<?= $produk['id'] ?>" data-toggle="modal" data-target="#exampleModal" data-produk="<?= $produk['nama_produk'] ?>" data-deskripsi="<?= $produk['deskripsi'] ?>" data-harga="<?= $produk['harga'] ?>" data-tokopedia="<?= $produk['link'] ?>" data-bukalapak="<?= $produk['link'] ?>" data-shoppe="<?= $produk['link'] ?>" data-whatever="@mdo">Update Data</button>
+                      <?php
+                      if (!empty($produk['link'])) {
+                      ?>
+                        <a href="<?= $produk['link'] ?>">Link WA</a>
+                      <?php
+                      }
+                      ?>
+                    </td>
+                    <td>
+                      <button id="updatedata" type="button" class="badge badge-primary float-lg-left mr-1" data-idproduk="<?= $produk['id'] ?>" data-toggle="modal" data-target="#exampleModal" data-produk="<?= $produk['nama_produk'] ?>" data-deskripsi="<?= $produk['deskripsi'] ?>" data-harga="<?= $produk['harga'] ?>" data-tokopedia="<?= $produk['tokopedia'] ?>" data-bukalapak="<?= $produk['bukalapak'] ?>" data-shoppe="<?= $produk['shoppe'] ?>" data-wa="<?= $produk['link'] ?>" data-whatever="@mdo">Update Data</button>
 
                       <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/delete/<?= $produk['id']; ?>" class="badge badge-danger float-lg-left mr-1" onclick="return confirm('yakin')">Delete</a>
 
@@ -86,7 +113,7 @@
                   <th>link tokopedia</th>
                   <th>link bukalapak</th>
                   <th>link shoppe</th>
-                  <!-- <th>link whatsapp</th> -->
+                  <th>link whatsapp</th>
                   <th>link aksi</th>
                 </tr>
 
@@ -137,6 +164,21 @@
                 <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
               </div>
               <div class="form-group">
+                <label for="exampleInputPassword1">Tokopedia</label>
+                <textarea name="tokopedia" id="tokopedia" class="form-control"></textarea>
+                <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Shoppe</label>
+                <textarea name="shoppe" id="shoppe" class="form-control"></textarea>
+                <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Bukalapak</label>
+                <textarea name="bukalapak" id="bukalapak" class="form-control"></textarea>
+                <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
+              </div>
+              <div class="form-group">
                 <label for="exampleInputPassword1">Link</label>
                 <textarea name="link" id="link" class="form-control"></textarea>
                 <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
@@ -156,13 +198,19 @@
           var namaproduk = $(this).data('produk')
           var harga = $(this).data('harga')
           var deskripsi = $(this).data('deskripsi')
-          var link = $(this).data('tokopedia')
+          var link = $(this).data('wa')
+          var tokopedia = $(this).data('tokopedia')
+          var shoppe = $(this).data('shoppe')
+          var bukalapak = $(this).data('bukalapak')
           var id = $(this).data('idproduk')
           // console.log(namaproduk)
           $('#nama_produk').val(namaproduk)
           $('#harga').val(harga)
           $('#deskripsi').val(deskripsi)
           $('#link').val(link)
+          $('#shoppe').val(shoppe)
+          $('#tokopedia').val(tokopedia)
+          $('#bukalapak').val(bukalapak)
           $('#idproduk').val(id)
         })
       })

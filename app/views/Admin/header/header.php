@@ -51,11 +51,11 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.php" class="nav-link">Home</a>
+                    <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/adminpage" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
+                <!-- <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
-                </li>
+                </li> -->
             </ul>
 
             <!-- SEARCH FORM -->
@@ -326,7 +326,7 @@
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="<?= BASEURL, PORT, LOCATION; ?>/admin/adminpage">Home</a></li>
                                 <li class="breadcrumb-item active">Dashboard v1</li>
                             </ol>
                         </div><!-- /.col -->

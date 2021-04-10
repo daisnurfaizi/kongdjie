@@ -75,13 +75,16 @@ class Product_model
         if ($datagambar == false) {
             return false;
         } else {
-            $query = ("INSERT into product (nama_produk,deskripsi,harga,gambar,link) values (:nama_produk,:deskripsi,:harga,:gambar,:link)");
+            $query = ("INSERT into product (nama_produk,deskripsi,harga,gambar,link,tokopedia,shoppe,bukalapak) values (:nama_produk,:deskripsi,:harga,:gambar,:link,:tokopedia,:shoppe,:bukalapak)");
             $this->db->query($query);
             $this->db->bind('nama_produk', $data['nama_produk']);
             $this->db->bind('deskripsi', $data['deskripsi']);
             $this->db->bind('harga', $data['harga']);
             $this->db->bind('gambar', $datagambar);
             $this->db->bind('link', $data['link']);
+            $this->db->bind('tokopedia', $data['tokopedia']);
+            $this->db->bind('shoppe', $data['shoppe']);
+            $this->db->bind('bukalapak', $data['bukalapak']);
             $this->db->execute();
             return $this->db->RowCount();
         }
