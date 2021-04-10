@@ -22,6 +22,8 @@ class Admin extends Controller
 
         $data['judul'] = 'Admin';
         $data['wilayah'] = $this->model('Product_model')->getWilayah();
+        // $data['kabupaten'] = $this->model('Wilayah_model')->kabupaten($_POST);
+
 
         $this->view('Admin/header/header');
         $this->view('Admin/pages/forms/general', $data);
@@ -30,6 +32,16 @@ class Admin extends Controller
     public function Datatable()
     {
         $data['judul'] = 'Admin';
+        $data['produk'] = $this->model('Product_model')->getprodukall();
+
+        $this->view('Admin/header/header');
+        $this->view('Admin/pages/tables/data', $data);
+        $this->view('Admin/footer/footer');
+    }
+
+    public function Franchise()
+    {
+        $data['judul'] = 'Franchise';
         $data['produk'] = $this->model('Product_model')->getprodukall();
 
         $this->view('Admin/header/header');
@@ -63,7 +75,18 @@ class Admin extends Controller
     }
 
 
-
+    public function ubahproduk()
+    {
+        if ($this->model('Product_model')->UpdateProduk($_POST, $_FILES) > 0) {
+            Flasher::setFlash('berhasil', ' Diupdate ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Datatable');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'update', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/Datatable');
+            exit();
+        }
+    }
 
 
     public function TambahProduk()
@@ -76,11 +99,28 @@ class Admin extends Controller
             header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
             exit();
         } else {
-            Flasher::setFlash('gagal', 'ditambah', 'alert-danger');
+            Flasher::setFlash('gagal', 'ditambah pastikan yang anda upload adalah gambar dengan format jpg,jpeg,png dan ukuran gambar tidak lebih dari 3MB', 'alert-danger');
             header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
             exit();
         }
     }
+
+    public function Daftarfrencise()
+    {
+        // var_dump($_POST);
+        // var_dump($_FILES);
+        // $this->model('Product_model')->InputProduk($_POST, $_FILES);
+        if ($this->model('Frencise_model')->Inputfrencise($_POST) > 0) {
+            Flasher::setFlash('berhasil', ' Menambah data Freanchise ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'Menambah data Freanchise', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
+            exit();
+        }
+    }
+
 
     function uplad()
     {
@@ -115,5 +155,14 @@ class Admin extends Controller
         $namafilebaru .= $extensigambar;
         move_uploaded_file($tmpName, BASEURL . PORT . LOCATION, '/img' . $namafilebaru);
         return $namafilebaru;
+    }
+
+    public function kabupaten()
+    {
+        $data['kabupaten'] = $this->model('Wilayah_model')->kabupaten($_POST);
+    }
+    public function kecamatan()
+    {
+        $data['kecamatan'] = $this->model('Wilayah_model')->kecamatan($_POST);
     }
 }
