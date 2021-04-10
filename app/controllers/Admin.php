@@ -4,11 +4,30 @@ class Admin extends Controller
     public function index()
     {
         $data['judul'] = 'Login';
-
+        // $this->model('Login_model')->cekUser();
         $this->view('Admin/login/index', $data);
+    }
+    // login
+    public function login()
+    {
+        // echo "login";
+        // header('location:' . BASEURL . PORT . LOCATION . '/Admin/adminpage');
+        // $data['judul'] = 'Login';
+        // $this->model('Login_model')->cek_login($_POST);
+        if ($this->model('Login_model')->cek_login($_POST) == 0) {
+            Flasher::setFlash('User tidak di temukan', ' Silahkan periksa Username dan Password ', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/Admin');
+            exit();
+        }
+    }
+
+    public function logout()
+    {
+        $this->model('Login_model')->logout();
     }
     public function adminpage()
     {
+        // $this->model('Login_model')->cekUser();
         $data['judul'] = 'Admin';
         $data['jumlahproduk'] = $this->model('Product_model')->jumlahproduk();
         $data['jumlahtoko'] = $this->model('Frencise_model')->jumlahtoko();

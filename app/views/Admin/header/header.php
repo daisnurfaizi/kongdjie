@@ -167,23 +167,7 @@
 
 
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
-                                <p>
-                                    Pages
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="pages/examples/project-add.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Project Add</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                        <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/logout" class="btn btn-danger">Logout</a>
                         <li class="nav-item">
                             < <ul class="nav nav-treeview">
                         <li class="nav-item">
