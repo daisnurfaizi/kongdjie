@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Admin Panel</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
@@ -82,7 +82,7 @@
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
                 <img src="<?= BASEURL, LOCATION ?>/dist/img/CV.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Admin</span>
+                <span class="brand-text font-weight-light"><?= $_SESSION['username'] ?></span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
@@ -157,6 +157,12 @@
                                     <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/Franchise" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data Franchise</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/User" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data User Admin</p>
                                     </a>
                                 </li>
 

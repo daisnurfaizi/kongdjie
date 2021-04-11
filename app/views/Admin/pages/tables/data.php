@@ -1,5 +1,15 @@
     <!-- Main content -->
     <div class="container-fluid">
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Selamat datang !</h4>
+        <p>Disini adalah tampilan untuk halaman dashboard produk dimana anda dapat melakukan edit dan delete data. Pada produk yang telah anda input</p>
+        <hr>
+        <p class="mb-0">1. Tombol update berfungsi untuk melakukan update data Produk anda</p>
+        <hr>
+        <p class="mb-0">2. Tombol delete berfungsi untuk menghapus produk anda</p>
+        <hr>
+        <p class="mb-0">3. Link Berfungsi untuk redirect ke halaman toko online anda. dan juga memesan melalui wa</p>
+      </div>
       <div class="col-lg-6">
         <?php Flasher::flash() ?>
       </div>
@@ -153,7 +163,7 @@
                 <label for="exampleInputFile">Gambar</label>
                 <div class="input-group">
                   <div class="custom-file">
-                    <input type="file" required class="custom-file-input" id="exampleInputFile" name="gambar">
+                    <input type="file" class="custom-file-input" id="exampleInputFile" name="gambar">
                     <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                   </div>
                 </div>
@@ -179,8 +189,8 @@
                 <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Link</label>
-                <textarea name="link" id="link" class="form-control"></textarea>
+                <label for="exampleInputPassword1">Nomor Whataspp untuk pemesanan</label>
+                <input type="number" name="link" maxlength="13" id="link" class="form-control">
                 <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
               </div>
           </div>

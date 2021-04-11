@@ -76,12 +76,13 @@ class Product_model
             return false;
         } else {
             $query = ("INSERT into product (nama_produk,deskripsi,harga,gambar,link,tokopedia,shoppe,bukalapak) values (:nama_produk,:deskripsi,:harga,:gambar,:link,:tokopedia,:shoppe,:bukalapak)");
+            $linkwa = "https://wa.me/" . $data['link'] . "?text=Saya ingin memesan " . $data['nama_produk'];
             $this->db->query($query);
             $this->db->bind('nama_produk', $data['nama_produk']);
             $this->db->bind('deskripsi', $data['deskripsi']);
             $this->db->bind('harga', $data['harga']);
             $this->db->bind('gambar', $datagambar);
-            $this->db->bind('link', $data['link']);
+            $this->db->bind('link', $linkwa);
             $this->db->bind('tokopedia', $data['tokopedia']);
             $this->db->bind('shoppe', $data['shoppe']);
             $this->db->bind('bukalapak', $data['bukalapak']);
@@ -102,6 +103,8 @@ class Product_model
     {
         $datagambar = $this->upload($gambar);
         //UPDATE `mahasiswa` SET `npm` = '21231232' WHERE `mahasiswa`.`id` = 1; 
+        $linkwa = "https://wa.me/" . $data['link'] . "?text=Saya ingin memesan " . $data['nama_produk'];
+
         $query = "UPDATE product SET
             nama_produk = :nama_produk,
             deskripsi=:deskripsi,
@@ -115,7 +118,7 @@ class Product_model
         $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->bind('harga', $data['harga']);
         $this->db->bind('gambar', $datagambar);
-        $this->db->bind('link', $data['link']);
+        $this->db->bind('link', $linkwa);
         $this->db->bind('id', $data['id']);
         $this->db->execute();
         return $this->db->RowCount();

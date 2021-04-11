@@ -31,6 +31,7 @@ class Admin extends Controller
         $data['judul'] = 'Admin';
         $data['jumlahproduk'] = $this->model('Product_model')->jumlahproduk();
         $data['jumlahtoko'] = $this->model('Frencise_model')->jumlahtoko();
+        $data['jumlahadmin'] = $this->model('User_model')->jumlahadmin();
         $this->view('Admin/header/header');
         $this->view('Admin/index', $data);
         $this->view('Admin/footer/footer');
@@ -210,6 +211,54 @@ class Admin extends Controller
         } else {
             Flasher::setFlash('gagal', 'update', 'alert-danger');
             header('location:' . BASEURL . PORT . LOCATION . '/admin/Franchise');
+            exit();
+        }
+    }
+
+    public function user()
+    {
+        $data['judul'] = 'Data User Admin';
+        $data['useradmin'] = $this->model('User_model')->getuserall();
+        $this->view('Admin/header/header');
+        $this->view('Admin/pages/tables/datauseradmin', $data);
+        $this->view('Admin/footer/footer');
+    }
+
+    public function InputUser()
+    {
+        if ($this->model('User_model')->InputUser($_POST) > 0) {
+            Flasher::setFlash('berhasil', ' ditambah ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'ditambah pastikan yang anda upload adalah gambar dengan format jpg,jpeg,png dan ukuran gambar tidak lebih dari 3MB', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/inputform');
+            exit();
+        }
+    }
+
+    public function ubahuser()
+    {
+        if ($this->model('User_model')->Update($_POST) > 0) {
+            Flasher::setFlash('berhasil', ' Diupdate ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/User');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'update', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/User');
+            exit();
+        }
+    }
+
+    public function deleteuser($id)
+    {
+        if ($this->model('User_model')->deleteuser($id) > 0) {
+            Flasher::setFlash('berhasil', ' dihapus ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/User');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'dihapus', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/User');
             exit();
         }
     }

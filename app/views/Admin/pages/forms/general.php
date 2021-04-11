@@ -145,20 +145,33 @@
 
       <div class="card card-danger">
         <div class="card-header">
-          <h3 class="card-title">Different Width</h3>
+          <h3 class="card-title">Input User</h3>
         </div>
         <div class="card-body">
-          <div class="row">
-            <div class="col-3">
-              <input type="text" class="form-control" placeholder=".col-3">
+          <form action="<?= BASEURL, PORT, LOCATION; ?>/admin/InputUser" method="POST">
+            <div class="form-group">
+              <label>Nama Lengkap</label>
+              <input type="text" class="form-control" required name="nama" placeholder="Nama">
             </div>
-            <div class="col-4">
-              <input type="text" class="form-control" placeholder=".col-4">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="Username" required name="username" class="form-control" placeholder="Username">
             </div>
-            <div class="col-5">
-              <input type="text" class="form-control" placeholder=".col-5">
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" name="password" required placeholder="Password">
             </div>
-          </div>
+            <div class="form-group">
+              <label>Level</label>
+              <select id="level" class="form-control select2 select2-danger" name="level" data-dropdown-css-class="select2-danger" required style="width: 100%;">
+                <option value="user" selected="selected">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+          </form>
         </div>
         <!-- /.card-body -->
       </div>

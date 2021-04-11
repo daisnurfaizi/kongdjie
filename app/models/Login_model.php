@@ -14,7 +14,7 @@ class Login_model
         $query = "SELECT * from user where username=:username and password=:password";
         $this->db->query($query);
         $this->db->bind('username', $data['username']);
-        $this->db->bind('password', $data['password']);
+        $this->db->bind('password', base64_encode($data['password']));
         $this->db->execute();
         $datalogin = $this->db->single();
         if (!empty($datalogin)) {
