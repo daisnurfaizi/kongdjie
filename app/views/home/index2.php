@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION; ?>/css/style2.css">
     <link rel="icon" type="image/png" href="<?= BASEURL, PORT, LOCATION; ?>/img/logo.png">
-
+    <style>
+    #more {display: none;}
+    </style>
     <title>Kong Djie Coffee</title>
   </head>
   <body>
@@ -68,13 +70,15 @@
     <section class="isi" id="profile">
       <div class="row about">
         <div class="col">
+    
           <p> Kong Djie Coffee merupakan usaha kopi yang  berdiri sejak 1943 yang berlokasi  di Tanjung  Pandan , Belitung. Saat ini Kong Djie di dukung  lebih 100 outlet cafe dan resto.  Kong Djie  berkomitmen untuk selalu memenuhi kebutuhan dan  kepuasan konsumen,  tidak hanya dengan   menyediakan produk dengan kualitas terbaik,   namun juga memberikan solusi yang tepat bagi  setiap pangsa pasar kami. </p>
-          
-          <a href="" class="btn viewdetail" data-toggle="modal" data-target="#mymodal"> View Detail </a>
+          <!-- <a href="" class="btn viewdetail" data-toggle="modal" data-target="#mymodal">Read More</a> -->
+          <a href="" class="btn viewdetail" id="modalbtn">Read More</a>
           <div class="modal" id='mymodal'>
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
+                
                   <h3>Sejarah KongDjie Coffee</h3>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -85,6 +89,23 @@
                 Dengan pengalaman yang cukup mumpuni Kong Djie telah memiliki kepekaan untuk memberikan Kualitas dan rasa atas setiap kebutuhan konsumen yang terus berkembang. Pengetahuan ini membuat kami mampu untuk memberikan solusi yang tepat bagi mitra kami dalam memenuhi keinginan konsumen yang semakin kompleks. <br><br>
                 Seluruh Produk kami terjamin keamanan dan mutunya karena sebelum beredar telah diperiksa dan didaftarkan ke Balai Pengawasan Obat dan Makanan (BPOM).
                 </div>
+                <script>
+                function viewdetail {
+                  var dots = document.getElementById("dots");
+                  var moreText = document.getElementById("modal-body");
+                  var btnText = document.getElementById("modalbtn");
+
+                  if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                  } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                  }
+                }
+                </script>
               </div>
             </div>
           </div>
