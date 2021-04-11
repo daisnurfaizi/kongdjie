@@ -88,7 +88,7 @@ if($page > 1){
       ?>
       
         <!-- <div class="row"> -->
-        <div class="col-md-4">
+        <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
               <div class="card-bg">
@@ -98,7 +98,7 @@ if($page > 1){
                   <?= substr($produk['deskripsi'], 0, 50) ?>
                 </h6>
                 <p class="card-text">Rp <?= $produk['harga'] ?></p>
-                <p class="card-text">Order here</p>
+                <p class="card-text">Order Here</p>
                 <div class="col-sd">
                   <div class="box">
                     <a href="https://www.facebook.com/">
