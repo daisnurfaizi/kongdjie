@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <div class="alert alert-warning" role="alert">
         <h4 class="alert-heading">Selamat datang !</h4>
-        <p>Disini adalah tampilan untuk halaman dashboard Data Admin dimana anda dapat melakukan edit dan delete data. Pada produk yang telah anda input</p>
+        <p>Disini adalah tampilan untuk halaman dashboard Data Admin dimana anda dapat melakukan edit dan delete data. Pada Admin yang telah anda input</p>
         <hr>
         <p class="mb-0">1. Tombol update berfungsi untuk melakukan update data Admin anda</p>
         <hr>
