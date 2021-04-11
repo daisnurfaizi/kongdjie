@@ -153,11 +153,11 @@
               <input type="hidden" class="form-control" id="idproduk" placeholder="Nama Produk" name="id">
               <div class="form-group">
                 <label for="exampleInputEmail1">Nama Produk</label>
-                <input type="text" class="form-control" id="nama_produk" placeholder="Nama Produk" name="nama_produk" required>
+                <input type="text" class="form-control" id="nama_produk" placeholder="Nama Produk" name="nama_produk">
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Harga</label>
-                <input type="number" required class="form-control" id="harga" placeholder="Harga" name="harga">
+                <input type="number" step="1" min="1" max="99999999" maxlength="7" inputmode="numeric" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" id="harga" placeholder="Harga" name="harga">
               </div>
               <div class="form-group">
                 <label for="exampleInputFile">Gambar</label>
@@ -170,7 +170,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Deskripsi</label>
-                <textarea name="deskripsi" required id="deskripsi" class="form-control"></textarea>
+                <textarea name="deskripsi" id="deskripsi" class="form-control"></textarea>
                 <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
               </div>
               <div class="form-group">
@@ -190,7 +190,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Nomor Whataspp untuk pemesanan</label>
-                <input type="number" name="link" maxlength="13" id="link" class="form-control">
+                <input type="text" name="link" id="link" class="form-control">
                 <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
               </div>
           </div>

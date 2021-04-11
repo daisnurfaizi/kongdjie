@@ -1,11 +1,12 @@
 <div class="container-fluid">
+  <?php Flasher::flash() ?>
   <div class="row">
     <!-- left column -->
     <?php
     // var_dump($data['wilayah ']);
     ?>
     <div class="col-md-6">
-      <?php Flasher::flash() ?>
+
 
       <!-- general form elements -->
       <div class="card card-primary">
@@ -22,7 +23,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Harga</label>
-              <input type="number" required class="form-control" id="exampleInputPassword1" placeholder="Harga" name="harga">
+              <input type="number" required step="1" min="1" max="99999999" maxlength="7" inputmode="numeric" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" id="exampleInputPassword1" placeholder="Harga" name="harga">
             </div>
             <div class="form-group">
               <label for="exampleInputFile">Gambar</label>
@@ -54,8 +55,9 @@
               <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Link</label>
-              <textarea name="link" id="link" class="form-control"></textarea>
+              <label for="exampleInputPassword1">Nomor Whatsapp </label>
+              <!-- <textarea name="link" id="link" class="form-control"></textarea> -->
+              <input type="number" required step="1" min="1" max="9999999999999" maxlength="13" inputmode="numeric" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" id="exampleInputPassword1" placeholder="nomor wa" name="link">
               <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Deskripsi" name="deskripsi"> -->
             </div>
           </div>
