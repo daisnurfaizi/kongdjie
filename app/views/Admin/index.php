@@ -25,14 +25,14 @@
       <!-- small box -->
       <div class="small-box bg-success">
         <div class="inner">
-          <h3><?= $data['jumlahadmin'][0]['COUNT(id)'] ?><sup style="font-size: 20px"></sup></h3>
+          <h3><?= $data['jumlahtoko'][0]['COUNT(id)'] ?><sup style="font-size: 20px"></sup></h3>
 
-          <p>Jumlah User Admin</p>
+          <p>Jumlah Franchise</p>
         </div>
         <div class="icon">
           <i class="ion ion-stats-bars"></i>
         </div>
-        <a href="<?= BASEURL, PORT, LOCATION ?>/admin/User" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="<?= BASEURL, PORT, LOCATION ?>/admin/Franchise" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
@@ -40,14 +40,14 @@
       <!-- small box -->
       <div class="small-box bg-warning">
         <div class="inner">
-          <h3><?= $data['jumlahtoko'][0]['COUNT(id)'] ?></h3>
+          <h3><?= $data['jumlahadmin'][0]['COUNT(id)'] ?></h3>
 
-          <p>Jumlah Frenchise</p>
+          <p>Jumlah User Admin</p>
         </div>
         <div class="icon">
           <i class="ion ion-person-add"></i>
         </div>
-        <a href="<?= BASEURL, PORT, LOCATION ?>/admin/Franchise" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="<?= BASEURL, PORT, LOCATION ?>/admin/User" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
@@ -58,15 +58,15 @@
     <!-- ./col -->
   </div>
   <div class="container-fluid">
-    <div class="alert alert-warning" role="alert">
+    <!-- <div class="alert alert-warning" role="alert">
       <h4 class="alert-heading">User Admin</h4>
       <p>Disini tables yang di dalamnya terdapat Data admin untuk halaman dashboard Data Admin dimana anda dapat melakukan edit dan delete data. Pada Admin yang telah anda input</p>
       <hr>
       <p class="mb-0">1. Tombol update berfungsi untuk melakukan update data Admin anda</p>
       <hr>
       <p class="mb-0">2. Tombol delete berfungsi untuk menghapus Admin anda</p>
-    </div>
-    <div class="alert alert-danger" role="alert">
+    </div> -->
+    <!-- <div class="alert alert-danger" role="alert">
       <h4 class="alert-heading">Rule unutuk user admin</h4>
       <hr>
       <p class="mb-0">1. Level untuk memberikan peringkat hak akses pada web anda terdapat 2 level</p>
@@ -74,7 +74,7 @@
       <p class="mb-0">Level Admin: Adalah role user yang bisa membuat dan menghapus user admin lainya</p>
       <hr>
       <p class="mb-0">Level User: Adalah role user yang tidak bisa membuat dan menghapus user admin lainya</p>
-    </div>
+    </div> -->
     <div class="alert alert-primary" role="alert">
       <h4 class="alert-heading">Form Input</h4>
       <p>Terdapat Form yang di dalamya ada From input untuk melakukan input data. Terdapat 3 hal yang dapat anda input yaitu updad produk, input data frenchise, input user</p>

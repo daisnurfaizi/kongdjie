@@ -4,6 +4,7 @@ class Admin extends Controller
     public function index()
     {
         $data['judul'] = 'Login';
+
         // $this->model('Login_model')->cekUser();
         $this->view('Admin/login/index', $data);
     }
@@ -13,7 +14,6 @@ class Admin extends Controller
         // echo "login";
         // header('location:' . BASEURL . PORT . LOCATION . '/Admin/adminpage');
         // $data['judul'] = 'Login';
-        // $this->model('Login_model')->cek_login($_POST);
         if ($this->model('Login_model')->cek_login($_POST) == 0) {
             Flasher::setFlash('User tidak di temukan', ' Silahkan periksa Username dan Password ', 'alert-danger');
             header('location:' . BASEURL . PORT . LOCATION . '/Admin');
@@ -27,7 +27,7 @@ class Admin extends Controller
     }
     public function adminpage()
     {
-        // $this->model('Login_model')->cekUser();
+        $this->model('Login_model')->cekUser();
         $data['judul'] = 'Admin';
         $data['jumlahproduk'] = $this->model('Product_model')->jumlahproduk();
         $data['jumlahtoko'] = $this->model('Frencise_model')->jumlahtoko();
@@ -40,7 +40,7 @@ class Admin extends Controller
 
     public function inputform()
     {
-
+        $this->model('Login_model')->cekUser();
         $data['judul'] = 'Admin';
         $data['wilayah'] = $this->model('Product_model')->getWilayah();
         // $data['kabupaten'] = $this->model('Wilayah_model')->kabupaten($_POST);
@@ -52,6 +52,8 @@ class Admin extends Controller
     }
     public function Datatable()
     {
+        $this->model('Login_model')->cekUser();
+
         $data['judul'] = 'Admin';
         $data['produk'] = $this->model('Product_model')->getprodukall();
 
@@ -62,6 +64,7 @@ class Admin extends Controller
     // data fanchise
     public function Franchise()
     {
+        $this->model('Login_model')->cekUser();
         $data['judul'] = 'Franchise';
         $data['Franchise'] = $this->model('Frencise_model')->Franchiseall();
         $data['wilayah'] = $this->model('Product_model')->getWilayah();
@@ -217,6 +220,8 @@ class Admin extends Controller
 
     public function user()
     {
+        $this->model('Login_model')->cekUser();
+
         $data['judul'] = 'Data User Admin';
         $data['useradmin'] = $this->model('User_model')->getuserall();
         $this->view('Admin/header/header');

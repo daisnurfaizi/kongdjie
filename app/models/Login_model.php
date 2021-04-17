@@ -32,10 +32,6 @@ class Login_model
             header('location:' . BASEURL . PORT . LOCATION . '/admin');
             // echo "sesion tidak ada";
             exit();
-        } else {
-            header('location:' . BASEURL . PORT . LOCATION . '/admin/adminpage');
-            // echo "sesion ada";
-            exit();
         }
     }
 
