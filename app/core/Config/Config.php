@@ -1,6 +1,6 @@
 <?php
 //untuk membuat file config
-define('BASEURL', 'http://locahost');
+define('BASEURL', 'http://localhost');
 //port jika dipakai
 define('PORT', '');
 //folder web
