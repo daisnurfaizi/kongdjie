@@ -8,5 +8,5 @@ define('LOCATION', '/kongdjie/public');
 //database atur disini
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'D@isd415');
 define('DB_NAME', 'kongdji');
