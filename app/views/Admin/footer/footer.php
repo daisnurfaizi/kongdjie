@@ -24,7 +24,10 @@
 
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
-<script src="<?= BASEURL, PORT, LOCATION ?>/plugins/jquery/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+
+<!-- <script src="<?= BASEURL, PORT, LOCATION ?>/plugins/jquery/jquery.min.js"></script> -->
+
 <script src="<?= BASEURL, PORT, LOCATION ?>/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 
 <!-- Bootstrap -->
@@ -47,7 +50,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?= BASEURL, PORT, LOCATION ?>/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?= BASEURL, PORT, LOCATION ?>/dist/js/pages/dashboard2.js"></script>
+<!-- <script src="<?= BASEURL, PORT, LOCATION ?>/dist/js/pages/dashboard2.js"></script> -->
 <script src="<?= BASEURL, PORT, LOCATION ?>/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= BASEURL, PORT, LOCATION ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= BASEURL, PORT, LOCATION ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>

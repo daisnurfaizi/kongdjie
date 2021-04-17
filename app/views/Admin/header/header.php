@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Admin Panel</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -48,11 +51,11 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.php" class="nav-link">Home</a>
+                    <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/adminpage" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
+                <!-- <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
-                </li>
+                </li> -->
             </ul>
 
             <!-- SEARCH FORM -->
@@ -77,9 +80,9 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="<?= BASEURL, LOCATION ?>/dist/img/CV.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Admin</span>
+            <a href="" class="brand-link">
+                <!-- <img src="<?= BASEURL, LOCATION ?>/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
+                <span class="brand-text font-weight-light"><?= $_SESSION['username'] ?></span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
@@ -122,14 +125,7 @@
                                 <li class="nav-item">
                                     <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/inputform" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>General Elements</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="pages/forms/editors.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Editors</p>
+                                        <p>Form Input</p>
                                     </a>
                                 </li>
                             </ul>
@@ -150,30 +146,30 @@
                                         <p>Data Produk</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/Franchise" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Franchise</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/User" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data User Admin</p>
+                                    </a>
+                                </li>
 
                             </ul>
                         </li>
-
-
-
-
-
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                            <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/logout" class="nav-link">
+                                <!-- <i class="nav-icon fas fa-edit"></i> -->
+                                <i class="fas fa-power-off"></i>&nbsp;
                                 <p>
-                                    Pages
-                                    <i class="fas fa-angle-left right"></i>
+                                    Logout
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="pages/examples/project-add.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Project Add</p>
-                                    </a>
-                                </li>
-                            </ul>
+
                         </li>
                         <li class="nav-item">
                             < <ul class="nav nav-treeview">
@@ -317,7 +313,7 @@
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="<?= BASEURL, PORT, LOCATION; ?>/admin/adminpage">Home</a></li>
                                 <li class="breadcrumb-item active">Dashboard v1</li>
                             </ol>
                         </div><!-- /.col -->
