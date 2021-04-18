@@ -1,6 +1,6 @@
 <?php
 //untuk membuat file config
-define('BASEURL', 'https://kongdjie.herokuapp.com');
+define('BASEURL', 'localhost');
 //port jika dipakai
 define('PORT', '');
 //folder web
