@@ -14,7 +14,7 @@ class Database
     public function __construct()
     {
         //data source name
-        $dsn = 'pgsql:host=' . $this->host . ';dbname=' . $this->dbname;
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
         //membuat optimasi agar database terus terkoneksi
         $option = [
             PDO::ATTR_PERSISTENT => true,
