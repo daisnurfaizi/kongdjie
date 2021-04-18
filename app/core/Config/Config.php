@@ -1,10 +1,10 @@
 <?php
 //untuk membuat file config
-define('BASEURL', 'localhost');
+define('BASEURL', 'https://kongdjie.herokuapp.com');
 //port jika dipakai
 define('PORT', '');
 //folder web
-define('LOCATION', '/kongdjie/public');
+define('LOCATION', '/public');
 //database atur disini
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
