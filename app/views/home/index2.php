@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="en" id="home">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,8 +19,8 @@
       <img src="<?= BASEURL, PORT, LOCATION; ?>/img/logo.png">
       <p>CV. KONDJIE HAMPARAN RASA</p>    
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light ">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"  aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="#home">home</a>
             <a class="nav-link" href="#profile">profile</a>
             <a class="nav-link" href="#product">product</a>
-            <a class="nav-link" href="#contact">franchise</a>
+            <a class="nav-link" href="#franchise">franchise</a>
             <a class="nav-link" href="#about1">about</a>
             <a class="nav-link" href="#location">location</a>
             <a class="nav-link" href="#contact">Contact</a>
@@ -65,50 +65,69 @@
     </section>
 
     <!-- Profile  -->
-    <section class="isi" id="profile">
-      <div class="row about">
-        <div class="col">
-          <p> Kong Djie Coffee merupakan usaha kopi yang  berdiri sejak 1943 yang berlokasi  di Tanjung  Pandan , Belitung. Saat ini Kong Djie di dukung  lebih 100 outlet cafe dan resto.  Kong Djie  berkomitmen untuk selalu memenuhi kebutuhan dan  kepuasan konsumen,  tidak hanya dengan   menyediakan produk dengan kualitas terbaik,   namun juga memberikan solusi yang tepat bagi  setiap pangsa pasar kami. </p>
-          
-          <a href="" class="btn viewdetail" data-toggle="modal" data-target="#mymodal"> View Detail </a>
-          <div class="modal" id='mymodal'>
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3>Sejarah KongDjie Coffee</h3>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">Kong Djie Coffee merupakan usaha kopi yang berdiri sejak 1943 yang berlokasi di Tanjung Pandan , Belitung. Kong djie coffee yang di awali berbentuk kedai kopi yang hingga saat ini berubah menjadi cafe dan resto di setiap Kota Besar di Indonesia. Saat ini Kong Djie di dukung lebih 100 outlet cafe dan resto. <br><br>
-                Dan pada Tahun 2021 dengan memperluas usaha nya, Kong Djie meramba usahanya di sektor Retail dan Distribusi dengan mendirikan CV.Kong Djie Hamparan Rasa. Kong Djie berkomitmen untuk selalu memenuhi kebutuhan dan kepuasan konsumen, tidak hanya dengan menyediakan produk dengan kualitas terbaik, namun juga memberikan solusi yang tepat bagi setiap pangsa pasar kami. <br><br>
-                Dengan pengalaman yang cukup mumpuni Kong Djie telah memiliki kepekaan untuk memberikan Kualitas dan rasa atas setiap kebutuhan konsumen yang terus berkembang. Pengetahuan ini membuat kami mampu untuk memberikan solusi yang tepat bagi mitra kami dalam memenuhi keinginan konsumen yang semakin kompleks. <br><br>
-                Seluruh Produk kami terjamin keamanan dan mutunya karena sebelum beredar telah diperiksa dan didaftarkan ke Balai Pengawasan Obat dan Makanan (BPOM).
+    <section class="profile" id="profile">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-6 paragraf">
+            <p> Kong Djie Coffee merupakan usaha kopi yang  berdiri sejak 1943 yang berlokasi  di Tanjung  Pandan , Belitung. Saat ini Kong Djie di dukung  lebih 100 outlet cafe dan resto.  Kong Djie  berkomitmen untuk selalu memenuhi kebutuhan dan  kepuasan konsumen,  tidak hanya dengan   menyediakan produk dengan kualitas terbaik,   namun juga memberikan solusi yang tepat bagi  setiap pangsa pasar kami. </p>
+            <a href="" class="btn viewdetail" data-toggle="modal" data-target="#mymodal"> View Detail </a>
+            <div class="modal" id='mymodal'>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3>Sejarah KongDjie Coffee</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">Kong Djie Coffee merupakan usaha kopi yang berdiri sejak 1943 yang 
+                   berlokasi di Tanjung Pandan , Belitung. Kong djie coffee yang di awali berbentuk kedai kopi 
+                   yang hingga saat ini berubah menjadi cafe dan resto di setiap Kota Besar di Indonesia. Saat 
+                   ini Kong Djie di dukung lebih 100 outlet cafe dan resto. <br><br>
+                             Dan pada Tahun 2021 dengan memperluas usaha nya, Kong Djie meramba usahanya di sektor            Retail 
+                   dan Distribusi dengan mendirikan CV.Kong Djie Hamparan Rasa. Kong Djie berkomitmen untuk 
+                   selalu memenuhi kebutuhan dan kepuasan konsumen, tidak hanya dengan menyediakan produk dengan
+                   kualitas terbaik, namun juga memberikan solusi yang tepat bagi setiap pangsa pasar kami. 
+                   <br><br>
+                             Dengan pengalaman yang cukup mumpuni Kong Djie telah memiliki kepekaan untuk memberikan 
+                   Kualitas dan rasa atas setiap kebutuhan konsumen yang terus berkembang. Pengetahuan ini 
+                   membuat kami mampu untuk memberikan solusi yang tepat bagi mitra kami dalam memenuhi 
+                   keinginan konsumen yang semakin kompleks. <br><br>
+                             Seluruh Produk kami terjamin keamanan dan mutunya karena sebelum beredar telah diperiksa           dan 
+                   didaftarkan ke Balai Pengawasan Obat dan Makanan (BPOM).
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="col-sm-6">
+            <img src="<?= BASEURL, PORT, LOCATION; ?>/img/gawean1.png" alt="viewdetail" class="gambarprofile">
+          </div>
         </div>
-        <div class="col">
-          <img src="<?= BASEURL, PORT, LOCATION; ?>/img/gawean1.png" alt="viewdetail">
+
+        <div class="row">
+          <div class="col-sm-12 vm">
+            <h3> Visi & Misi </h3>
+            <hr>
+          </div>
         </div>
-      </div>
-      <div class="teks">
-        <h3> Visi & Misi </h3>
-      </div>
-      <div class="visimisi">
-        <div class="visi">
-          <p> MENJADI PERUSAHAAN TERBAIK YANG MAMPU MEMBERIKAN RASA YANG BERKUALITAS  </p>
+
+        <div class="row">
+          <div class="col-sm-6 visi">
+            <p> MENJADI PERUSAHAAN TERBAIK YANG MAMPU MEMBERIKAN RASA YANG BERKUALITAS </p>
+          </div>
+
+          <div class="col-sm-6 misi">
+              <p><a href=""> MANAJEMEN DENGAN INTEGRITAS   TINGGI </a></p>  
+              <p><a href=""> MAMPU MEMPEROLEH LABA YANG BAIK   </a></p>  
+              <p><a href=""> PENGABDIAN UNTUK RELASI DAN   KONSUMEN </a></p> 
+              <p><a href=""> INOVASI TANPA HENTI </a></p>  
+              <p><a href=""> STANDAR ETIKA YANG TINGGI </a></p>
+          </div>
         </div>
-        <div class="misi">
-          <p><a href=""> MANAJEMEN DENGAN INTEGRITAS   TINGGI </a></p>  
-          <p><a href=""> MAMPU MEMPEROLEH LABA YANG BAIK   </a></p>  
-          <p><a href=""> PENGABDIAN UNTUK RELASI DAN   KONSUMEN </a></p>  
-          <p><a href=""> INOVASI TANPA HENTI </a></p>  
-          <p><a href=""> STANDAR ETIKA YANG TINGGI </a></p>
-        </div>           
+        <img src="<?= BASEURL, PORT, LOCATION; ?>/img/bijay coffe menu prodile.png" id="ornamen2">
       </div>
-      <img src="img/bijay coffe menu prodile.png" id="ornamen2">
     </section>
     <!-- Akhir Profile -->
 
@@ -147,102 +166,102 @@
     </section>
     <!-- Akhir Produk -->
 
-    
-<!-- Location -->
-<section class="location" id="location">
-  <div class="lokasi-kongdjie">
-    <div class="daftar-lokasi">
-      <h3 class="display-4">Info lokasi mitra kongdjie coffee</h3>
-      <div class="backlog">
-        <img class="gambar" src="<?= BASEURL, PORT, LOCATION; ?>/img/gawean1.png">
-      </div>
-      <div class="tekswilayah">
-        <div class="row">
-          <div class="col ml-4 text-left">
-            <a class="wilayah1" href="#">JABODETABEK</a>
-            <a class="wilayah1" href="#">JAWA BARAT</a>
-            <a class="wilayah1" href="#">JAWA TENGAH</a>
-            <a class="wilayah1" href="#">JAWA TIMUR</a>
-            <a class="wilayah1" href="#">BALI</a>
-            <a class="wilayah1" href="#">ACEH</a>
-            <a class="wilayah1" href="#">SUMATERA UTARA</a>
-            <a class="wilayah1" href="#">SUMATERA BARAT</a>
-            <a class="wilayah1" href="#">SUMATERA SELATAN</a>
-            <a class="wilayah1" href="#">RIAU</a>
-            <a class="wilayah1" href="#">JAMBI</a>
-            <a class="wilayah1" href="#">BENGKULU</a>
-            <a class="wilayah1" href="#">LAMPUNG</a>
-            <a class="wilayah1" href="#">NUSA TENGARA TIMUR</a>
-            <a class="wilayah1" href="#">NUSA TENGARA BARAT</a>
-            <a class="wilayah1" href="#">KEP. RIAU</a>
+    <!-- Location -->
+    <section class="location" id="location">
+      <div class="lokasi-kongdjie">
+        <div class="daftar-lokasi">
+          <h3 class="display-4">Info lokasi mitra kongdjie coffee</h3>
+          <div class="backlog">
+            <img class="gambar" src="<?= BASEURL, PORT, LOCATION; ?>/img/gawean1.png">
           </div>
-          <div class="col mr-4 text-right">
-            <a class="wilayah2" href="#">KEP. BANGKA</a>
-            <a class="wilayah2" href="#">KALIMANTAN UTARA</a>
-            <a class="wilayah2" href="#">KALIMANTAN SELATAN</a>      
-            <a class="wilayah2" href="#">KALIMANTAN BARAT</a>
-            <a class="wilayah2" href="#">KALIMANTAN TENGAH</a>
-            <a class="wilayah2" href="#">SULAWESI UTARA</a>
-            <a class="wilayah2" href="#">SULAWESI BARAT</a>
-            <a class="wilayah2" href="#">SULAWESI TENGAH</a>
-            <a class="wilayah2" href="#">SULAWESI SELATAN</a>
-            <a class="wilayah2" href="#">SULAWESI TENGGARA</a>
-            <a class="wilayah2" href="#">GORONTALO</a>
-            <a class="wilayah2" href="#">MALUKU</a>
-            <a class="wilayah2" href="#">MALUKU UTARA</a>
-            <a class="wilayah2" href="#">PAPUA BARAT</a>
-            <a class="wilayah2" href="#">PAPUA</a>      
+          <div class="tekswilayah">
+            <div class="row">
+              <div class="col ml-4 text-left">
+                <a class="wilayah1" href="#">JABODETABEK</a>
+                <a class="wilayah1" href="#">JAWA BARAT</a>
+                <a class="wilayah1" href="#">JAWA TENGAH</a>
+                <a class="wilayah1" href="#">JAWA TIMUR</a>
+                <a class="wilayah1" href="#">BALI</a>
+                <a class="wilayah1" href="#">ACEH</a>
+                <a class="wilayah1" href="#">SUMATERA UTARA</a>
+                <a class="wilayah1" href="#">SUMATERA BARAT</a>
+                <a class="wilayah1" href="#">SUMATERA SELATAN</a>
+                <a class="wilayah1" href="#">RIAU</a>
+                <a class="wilayah1" href="#">JAMBI</a>
+                <a class="wilayah1" href="#">BENGKULU</a>
+                <a class="wilayah1" href="#">LAMPUNG</a>
+                <a class="wilayah1" href="#">NUSA TENGARA TIMUR</a>
+                <a class="wilayah1" href="#">NUSA TENGARA BARAT</a>
+                <a class="wilayah1" href="#">KEP. RIAU</a>
+              </div>
+              <div class="col mr-4 text-right">
+                <a class="wilayah2" href="#">KEP. BANGKA</a>
+                <a class="wilayah2" href="#">KALIMANTAN UTARA</a>
+                <a class="wilayah2" href="#">KALIMANTAN SELATAN</a>      
+                <a class="wilayah2" href="#">KALIMANTAN BARAT</a>
+                <a class="wilayah2" href="#">KALIMANTAN TENGAH</a>
+                <a class="wilayah2" href="#">SULAWESI UTARA</a>
+                <a class="wilayah2" href="#">SULAWESI BARAT</a>
+                <a class="wilayah2" href="#">SULAWESI TENGAH</a>
+                <a class="wilayah2" href="#">SULAWESI SELATAN</a>
+                <a class="wilayah2" href="#">SULAWESI TENGGARA</a>
+                <a class="wilayah2" href="#">GORONTALO</a>
+                <a class="wilayah2" href="#">MALUKU</a>
+                <a class="wilayah2" href="#">MALUKU UTARA</a>
+                <a class="wilayah2" href="#">PAPUA BARAT</a>
+                <a class="wilayah2" href="#">PAPUA</a>      
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- Akhit Location -->
+    </section>
+    <!-- Akhit Location -->
+
 
 <!-- Contact  -->
-<section class="contact" id="contact" >
-  <div class="Halaman-Contact">
-      <div class="row">
-        <div class="col-sm">
-          <div class="contact1">
-              <img src="<?= BASEURL, PORT, LOCATION; ?>/img/pin-512.png" class="float-left">
-              <p>Taman Palem Mutiara Blok B7 no.30</br> 
-                  Cengkareng Timur, Jakarta Barat</p>
-          </div>
-          <div class="contact1">
-              <img src="<?= BASEURL, PORT, LOCATION; ?>/img/email.png" class="float-left" id="email">
-              <p>kngdjcr43@gmail.com</p>
-          </div>
-          <div class="contact1">
-              <img src="<?= BASEURL, PORT, LOCATION; ?>/img/PHONE.png" class="float-left">
-              <p>(021-22654327)</p>
-          </div>
-          <div class="contact1">
-              <img src="<?= BASEURL, PORT, LOCATION; ?>/img/003-whatsapp.png" class="float-left">
-              <p>(+62-12334567891011)</p>
-          </div>
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="contact1">
+          <img src="<?= BASEURL, PORT, LOCATION; ?>/img/pin-512.png" class="float-left">
+          <p>Taman Palem Mutiara Blok B7 no.30 Cengkareng Timur, Jakarta Barat</p>
         </div>
-        <div class="col-sm">
-          <div class="contactmid">
-              <a class="cmid" href="#home">HOME</a>
-              <a class="cmid" href="#profile">PROFILE</a>
-              <a class="cmid" href="#Produk">PRODUK</a>
-              <a class="cmid" href="#contact">FRANCHISE</a>
-              <a class="cmid" href="#about">ABOUT</a>
-              <a class="cmid" href="#location">LOCATION</a>
-              <a class="cmid" href="#contact">CONTACT</a>
-          </div>
+        <div class="contact1">
+            <img src="<?= BASEURL, PORT, LOCATION; ?>/img/email.png" class="float-left" id="email">
+            <p>kngdjcr43@gmail.com</p>
         </div>
-        <div class="col-sm">
-          <div class="sertifikat">
-              <p>SERTIFIKAT</p>
-              <div class="box">
-                <img src="<?= BASEURL, PORT, LOCATION; ?>/img/100PERSERN.png">
-                <img src="<?= BASEURL, PORT, LOCATION; ?>/img/mui.png" id="mui">
-                <img src="<?= BASEURL, PORT, LOCATION; ?>/img/VPOM.png" id="bpom">
-              </div>
-          </div>
+        <div class="contact1">
+            <img src="<?= BASEURL, PORT, LOCATION; ?>/img/PHONE.png" class="float-left">
+            <p>(021-22654327)</p>
+        </div>
+        <div class="contact1">
+            <img src="<?= BASEURL, PORT, LOCATION; ?>/img/003-whatsapp.png" class="float-left">
+            <p>(+62-12334567891011)</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contactmid">
+          <a href="#home">HOME</a>
+          <a href="#profile">PROFILE</a>
+          <a href="#Produk">PRODUK</a>
+          <a href="#">FRANCHISE</a>
+          <a href="#about">ABOUT</a>
+          <a href="#location">LOCATION</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="sertifikat">
+            <p>SERTIFIKAT</p>
+            <div class="box">
+              <img src="<?= BASEURL, PORT, LOCATION; ?>/img/100PERSERN.png">
+              <img src="<?= BASEURL, PORT, LOCATION; ?>/img/mui.png" id="mui">
+              <img src="<?= BASEURL, PORT, LOCATION; ?>/img/VPOM.png" id="bpom">
+            </div>
         </div>
       </div>
     </div>

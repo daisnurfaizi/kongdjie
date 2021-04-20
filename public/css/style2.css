@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .logatas{
   position: relative;
   z-index: 1;
@@ -26,11 +27,12 @@
 .navbar{
   font-family: 'lato';
   font-weight: normal;
-  position: relative;
+  /* position: relative; */
   margin-top: -17px;
-  /* background-color: rgb(165, 199, 98); */
+  background-color:#59321891;
   text-transform: uppercase;
   z-index: 1;
+  
 }
 
 .nav-link{
@@ -154,32 +156,33 @@ color: white !important;
 /* Akhir Home */
 
 /* Profile */
-.isi{
+.profile{
   background-color: #D6CBCB;
-  margin-top: -40px;
-  height: 800px;
-}
-.about{
-  width: 100%;
-}
-.about p{
-  /* background-color: aquamarine; */
-  text-align: justify;
-  padding: 10px 10px;
-  margin-left: 180px;
-  margin-right: 90px;
-  margin-top: 120px;
-  letter-spacing: 10%;
-}
-.about img{
-  width: 400px;
-  height: 400px;
-  margin-top: 50px;
-  display: block;
-  margin-left: 80px;
-  margin-right: 120px;
+  padding: 50px 0;
+  margin-top: -32px;
+  font-family: 'lato';
+  font-weight: bold;
 }
 
+.profile P{
+  text-align: justify;
+}
+
+.profile  h3{
+  margin: 20px 0;
+}
+
+.paragraf{
+  font-weight: normal;
+  color: #3D2120;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.gambarprofile{
+  width: 400px;
+  height: 400px;
+}
 .viewdetail{
   color: #9D5A06 ;
   text-align: center;
@@ -189,7 +192,7 @@ color: white !important;
   height: 40px;
   border: 3px solid #3D2120;
   border-radius: 10px;
-  margin-left: 290px;
+  margin-top: 20px;
 }
 
 .viewdetail:hover{
@@ -211,42 +214,25 @@ color: white !important;
   text-align: center;
   font-size: 20px
 }
-.modal-body{
-  padding: 20px 20px;
-  text-align: justify;
-  background-color: #D6CBCB;
-  color: #9D5A06 !important;
-  z-index: 1;
+
+.vm h3{
+  font-size: 28px;
+  font-weight: bold;
+  color: #593218;
 }
 
-.teks{
+.vm hr{
   text-align: center;
+  border: 2px solid #3D2120;
 }
 
-.teks h3{
+.visi p{
+  text-align: right;
   color: #9D5A06;
 }
 
-.visimisi{
-  display: flex;
-  justify-content: center;
-}
-
-.visi{
-  text-align: right;
-  box-sizing: border-box;
-  padding-top: 20px;
-  margin-left: -240px;
-  margin-right: 60px;
-}
-
-.misi{
-  padding-top: 20px;
-  padding-right: 60px;
-  margin-left: -40px;
-  /* margin-right: 320px; */
+.misi a{
   text-align: left;
-  box-sizing: border-box;
 }
 
 .misi p a{
@@ -255,14 +241,15 @@ color: white !important;
 }
 
 .misi p a:hover{
-  color: white !important;
+  color: #9D5A06 !important;
 }
 
 #ornamen2{
   width: 200px;
   height: 230px;
   margin-top: -160px;
-  margin-left: -30px;
+  float: left;
+  margin-left: -150px;
 }
 /* Akhir Profile */
 
@@ -365,97 +352,88 @@ color: white !important;
 .mid:hover{
   background-color: #3D2120;
   color: white !important;
-  border: 3px solid #9D5A06;
 }
 
 /*Akhir Menu About*/
 
 /* location */
 .lokasi-kongdjie{
-  /* margin-top: 10px; */
-  background-color: #3D2120;
-  position: relative;
-  font-family: 'Roboto';
-  height: 800px;
+/* margin-top: 10px; */
+background-color: #3D2120;
+position: relative;
+font-family: 'Roboto';
+height: 800px;
 }
 .display-4{
-  color: white;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-align: center;
-  /* background-color: aliceblue; */
-  padding: 45px 0;
+color: white;
+text-transform: uppercase;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 30px;
+text-align: center;
+/* background-color: aliceblue; */
+padding: 45px 0;
 }
 
 .backlog{
-  background-color: #593218;
-  border: 5px solid white;
-  max-width: 900px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+background-color: #593218;
+border: 5px solid white;
+max-width: 900px;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
 .backlog .gambar{
-  width: 500px;
-  height: 550px;
-  opacity: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+width: 500px;
+height: 550px;
+opacity: 80%;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
 .tekswilayah{
-  text-decoration: none;
-  margin-left: 220px;
-  margin-right: 220px;
-  margin-top: -555px;
-  padding: 5px 0;
+text-decoration: none;
+margin-left: 220px;
+margin-right: 220px;
+margin-top: -555px;
+padding: 5px 0;
 }
 
 .wilayah1{
-  text-decoration: none;
-  display: block;
-  padding: 5px 0;
-  color: white;
-  text-align: left;
+text-decoration: none;
+display: block;
+padding: 5px 0;
+color: white;
+text-align: left;
 }
 
 .wilayah1:hover{
-  text-decoration: none;
-  color: #3D2120; 
+text-decoration: none;
+color: #3D2120; 
 }
 
 .wilayah2{
-  text-decoration: none;
-  display: block;
-  padding: 5px 0;
-  color: white;
-  text-align: right;   ;
+text-decoration: none;
+display: block;
+padding: 5px 0;
+color: white;
+text-align: right;   ;
 }
 
 .wilayah2:hover{
-  text-decoration: none;
-  color: #3D2120;
+text-decoration: none;
+color: #3D2120;
 }
 /* Akhir Location */
+
 
 /* CONTACT */
 .contact{
 background-color: #9D5A06;
-height: 280px;
-}
-.Halaman-Contact{
-font-family: lato;
-color: #3D2120 ;
-padding-top: 40px;
-font-size: 18px;
-font-weight: bold;
-}
-.contact1{
-margin-left: 50px;
+/* height: 280px; */
+padding: 30px 0;
 }
 
 .contact1 img{
@@ -463,20 +441,29 @@ width: 35px;
 height: 35px;
 margin-right: 20px;
 }
+
+.contact1 p{
+font-family: 'lato';
+font-weight: bold;
+padding: 5px 0;
+}
+
 .contactmid {
 text-transform: uppercase;
 text-align: center;
-padding-bottom: 10px;
+font-family: 'lato';
+font-weight: bold;
 }
 
 
-.col-sm .contactmid .cmid {
+.contactmid a {
 color: #3D2120;
 display: block;
 text-decoration: none;
+padding: 5px 0;
 }
 
-.col-sm .contactmid .cmid:hover {
+.contactmid a:hover {
 color:white;
 text-decoration: none;
 }
@@ -485,6 +472,7 @@ text-decoration: none;
 width: 35px;
 height: 26px;
 }
+
 #mui{
 width: 80px;
 height: 77px;
@@ -498,23 +486,22 @@ height: 80px;
 .sertifikat img{
 width: 100px;
 height: 40px;
+margin: 0 5px;
 }
 
 .sertifikat p{
-margin-left: 140px;
+text-align: center;
+font-family: 'lato';
+font-weight: bold;
 }
 
 .box{
-margin-right: 60px;
 background-color: #3D2120;
 opacity: 75%;
 border-radius: 10px;
 padding: 5px 20px;
 }
 
-.box img{
-margin: 0 10px;
-}
 
 /* AKHIR CONTACT */
 
@@ -655,24 +642,19 @@ margin-bottom: top;
   
   
   /* Profile */
-  .isi{
-    height: 1200px;
+  .profile{
+    font-weight: normal;
+    padding: 20px 0;
   }
-  .about p{
-    padding: 5px 5px;
-    margin-left: 50px;
-    margin-right: 10px;
-    margin-top: 110px;
-    letter-spacing: 10%;
+
+  .paragraf{
+    font-size: 18px;
   }
-  .about img{
-    width: 350px;
-    height: 350px;
-    margin-top: 20px;
-    display: block;
-    margin-left: 70px;
-    margin-right: 60px;
-    font-size: 16px;
+
+  .profile img{
+    width: 320px;
+    height: 320px;
+    margin: 20px 0;
   }
 
   .viewdetail{
@@ -684,7 +666,6 @@ margin-bottom: top;
     border: 3px solid #3D2120;
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 170px;
   }
 
   .viewdetail:hover{
@@ -692,26 +673,41 @@ margin-bottom: top;
     color: white !important;
   }
 
-  .visimisi{
-    display: block;
-    margin: 20px 0;
+  .profile h3{
+    margin: 10px o;
   }
-
+  
   .visi{
     background-color: #3D2120;
-    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .visi p{
+    margin: 20px 0;
     text-align: center;
-    padding: 20px 20px;
-    margin: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
   }
 
   .misi{
     background-color: #9D5A06;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  .misi p{
     text-align: center;
-    padding: 20px 0;
-    margin-left: auto;
-    margin: 20px 0;
-    font-size: 16px;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .misi p a{
+    text-decoration: none;
+    color: #3D2120;
+  }
+
+  .misi p a:hover{
+    color: #593218 !important;
   }
 
   #ornamen2{
@@ -723,9 +719,8 @@ margin-bottom: top;
   .Mitrakepercayaan{
     font-family: 'lato';
     background-color: #D6CBCB;
-    height: 670px;
+    height: 750px;
     padding-top: 0;
-    /* border: 10px solid #9D5A06;    */
   }
 
   .mitra1{
@@ -739,14 +734,14 @@ margin-bottom: top;
 
   .mitra1 h4{
     font-size: 18px;
-    padding-bottom: 16px;
+    padding-bottom: 10px;
   }
 
   .mitra1 p{
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
     display: block;
   }
 
@@ -763,7 +758,7 @@ margin-bottom: top;
     padding-top: 20px;
   }
   .mitra2 p{
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px 0;
     margin-left: 30px;
     margin-right: 30px;
@@ -772,11 +767,6 @@ margin-bottom: top;
 
   .ornamen-mid img{
     display: none;
-    /* float: left;
-    width: 190px;
-    height: 190px;
-    margin-top: -450px;
-    margin-left: -60px; */
   }
   .ornamen-mid1 img{
     display: none;
@@ -788,86 +778,57 @@ margin-bottom: top;
     padding: 2px 0;
     width: 100px;
     height: 35px;
-    /* margin-top: -5px; */
     margin-left: 190px;
   }
   /* Akhir Menu About */
 
-  /* Menu Location */
-  .display-4{
-    font-size: 16px;
-    padding-top: -10px;
-    padding-bottom: 10px;
-  }
+/* Menu Location */
+.display-4{
+  font-size: 16px;
+  padding-top: -10px;
+  padding-bottom: 10px;
+}
 
-  .backlog{
-    border: 1px solid white; 
-    max-width: 450px;
-    height: 600px;
-  }
+.backlog{
+  border: 1px solid white; 
+  max-width: 450px;
+  height: 600px;
+}
 
-  .backlog .gambar{
-    width: 400px;
-    height: 450px;
-    opacity: 80%;
-    display: block;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.backlog .gambar{
+  width: 400px;
+  height: 450px;
+  opacity: 80%;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .tekswilayah{
-    font-size: 16px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: -570px;
-    padding: 5px 0;
-  }    
-  /* Akhir Location */
+.tekswilayah{
+  font-size: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -570px;
+  padding: 8px 0;
+}    
+/* Akhir Location */
 
   /* Menu Contact */
-  .contact{
-    display: block;
-    height: 600px;
-    padding-top: 10px;
-  }
-
-  .contactmid .cmid{
-    text-align: center;
-    display: block;
-  }
-
-  #email{
-    width: 35px;
-    height: 26px;
-  }
-  #mui{
-    width: 80px;
-    height: 77px;
-  }
-  
-  #bpom{
-    width: 80px;
-    height: 80px;
-  }
   .sertifikat {
     text-align: center;
     padding: 5px 5px;
   }
 
-  .sertifikat p{
-    margin-left: o;
-  }
-      
+
   .box{
-    margin-right: 0;
     background-color: #3D2120;
     opacity: 75%;
-    padding: 5px 0;
+    margin: 10px 0;
   }
   
   .box img{
-    margin: 0 10px;
-  }
+    margin: 0 15px;
+  } 
   /* Akhir Menu COntact */
 }
