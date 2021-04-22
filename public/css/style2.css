@@ -2,7 +2,12 @@
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
+
+.logatas{
+=======
 .logatas {
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   position: relative;
   z-index: 1;
   /* background-color: rgb(134, 240, 204); */
@@ -26,11 +31,12 @@
 .navbar {
   font-family: "lato";
   font-weight: normal;
-  position: relative;
+  /* position: relative; */
   margin-top: -17px;
-  /* background-color: rgb(165, 199, 98); */
+  background-color:#59321891;
   text-transform: uppercase;
   z-index: 1;
+  
 }
 
 .nav-link {
@@ -154,6 +160,17 @@
 /* Akhir Home */
 
 /* Profile */
+<<<<<<< HEAD
+.profile{
+  background-color: #D6CBCB;
+  padding: 50px 0;
+  margin-top: -32px;
+  font-family: 'lato';
+  font-weight: bold;
+}
+
+.profile P{
+=======
 .isi {
   background-color: #d6cbcb;
   margin-top: -40px;
@@ -164,24 +181,38 @@
 }
 .about p {
   /* background-color: aquamarine; */
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   text-align: justify;
-  padding: 10px 10px;
-  margin-left: 180px;
-  margin-right: 90px;
-  margin-top: 120px;
-  letter-spacing: 10%;
 }
+<<<<<<< HEAD
+
+.profile  h3{
+  margin: 20px 0;
+}
+
+.paragraf{
+  font-weight: normal;
+  color: #3D2120;
+  font-size: 20px;
+=======
 .about img {
   width: 400px;
   height: 400px;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   margin-top: 50px;
-  display: block;
-  margin-left: 80px;
-  margin-right: 120px;
 }
 
+<<<<<<< HEAD
+.gambarprofile{
+  width: 400px;
+  height: 400px;
+}
+.viewdetail{
+  color: #9D5A06 ;
+=======
 .viewdetail {
   color: #9d5a06;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   text-align: center;
   font-family: "lato";
   font-size: 16px;
@@ -189,7 +220,7 @@
   height: 40px;
   border: 3px solid #3d2120;
   border-radius: 10px;
-  margin-left: 290px;
+  margin-top: 20px;
 }
 
 .viewdetail:hover {
@@ -211,6 +242,21 @@
   text-align: center;
   font-size: 20px;
 }
+<<<<<<< HEAD
+
+.vm h3{
+  font-size: 28px;
+  font-weight: bold;
+  color: #593218;
+}
+
+.vm hr{
+  text-align: center;
+  border: 2px solid #3D2120;
+}
+
+.visi p{
+=======
 .modal-body {
   padding: 20px 20px;
   text-align: justify;
@@ -233,20 +279,21 @@
 }
 
 .visi {
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   text-align: right;
-  box-sizing: border-box;
-  padding-top: 20px;
-  margin-left: -240px;
-  margin-right: 60px;
+  color: #9D5A06;
 }
 
+<<<<<<< HEAD
+.misi a{
+=======
 .misi {
   padding-top: 20px;
   padding-right: 60px;
   margin-left: -40px;
   /* margin-right: 320px; */
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   text-align: left;
-  box-sizing: border-box;
 }
 
 .misi p a {
@@ -254,15 +301,21 @@
   color: #3d2120;
 }
 
+<<<<<<< HEAD
+.misi p a:hover{
+  color: #9D5A06 !important;
+=======
 .misi p a:hover {
   color: white !important;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
 }
 
 #ornamen2 {
   width: 200px;
   height: 230px;
   margin-top: -160px;
-  margin-left: -30px;
+  float: left;
+  margin-left: -150px;
 }
 /* Akhir Profile */
 
@@ -364,12 +417,85 @@
 .mid:hover {
   background-color: #3d2120;
   color: white !important;
+<<<<<<< HEAD
+=======
   border: 3px solid #9d5a06;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
 }
 
 /*Akhir Menu About*/
 
 /* location */
+<<<<<<< HEAD
+.lokasi-kongdjie{
+/* margin-top: 10px; */
+background-color: #3D2120;
+position: relative;
+font-family: 'Roboto';
+height: 800px;
+}
+.display-4{
+color: white;
+text-transform: uppercase;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 30px;
+text-align: center;
+/* background-color: aliceblue; */
+padding: 45px 0;
+}
+
+.backlog{
+background-color: #593218;
+border: 5px solid white;
+max-width: 900px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.backlog .gambar{
+width: 500px;
+height: 550px;
+opacity: 80%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.tekswilayah{
+text-decoration: none;
+margin-left: 220px;
+margin-right: 220px;
+margin-top: -555px;
+padding: 5px 0;
+}
+
+.wilayah1{
+text-decoration: none;
+display: block;
+padding: 5px 0;
+color: white;
+text-align: left;
+}
+
+.wilayah1:hover{
+text-decoration: none;
+color: #3D2120; 
+}
+
+.wilayah2{
+text-decoration: none;
+display: block;
+padding: 5px 0;
+color: white;
+text-align: right;   ;
+}
+
+.wilayah2:hover{
+text-decoration: none;
+color: #3D2120;
+=======
 .lokasi-kongdjie {
   /* margin-top: 10px; */
   background-color: #3d2120;
@@ -438,10 +564,18 @@
 .wilayah2:hover {
   text-decoration: none;
   color: #3d2120;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
 }
 /* Akhir Location */
 
+
 /* CONTACT */
+<<<<<<< HEAD
+.contact{
+background-color: #9D5A06;
+/* height: 280px; */
+padding: 30px 0;
+=======
 .contact {
   background-color: #9d5a06;
   height: 280px;
@@ -455,6 +589,7 @@
 }
 .contact1 {
   margin-left: 50px;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
 }
 
 .contact1 img {
@@ -462,7 +597,33 @@
   height: 35px;
   margin-right: 20px;
 }
+
+.contact1 p{
+font-family: 'lato';
+font-weight: bold;
+padding: 5px 0;
+}
+
 .contactmid {
+<<<<<<< HEAD
+text-transform: uppercase;
+text-align: center;
+font-family: 'lato';
+font-weight: bold;
+}
+
+
+.contactmid a {
+color: #3D2120;
+display: block;
+text-decoration: none;
+padding: 5px 0;
+}
+
+.contactmid a:hover {
+color:white;
+text-decoration: none;
+=======
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 10px;
@@ -477,15 +638,23 @@
 .col-sm .contactmid .cmid:hover {
   color: white;
   text-decoration: none;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
 }
 
 #email {
   width: 35px;
   height: 26px;
 }
+<<<<<<< HEAD
+
+#mui{
+width: 80px;
+height: 77px;
+=======
 #mui {
   width: 80px;
   height: 77px;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
 }
 
 #bpom {
@@ -493,6 +662,27 @@
   height: 80px;
 }
 
+<<<<<<< HEAD
+.sertifikat img{
+width: 100px;
+height: 40px;
+margin: 0 5px;
+}
+
+.sertifikat p{
+text-align: center;
+font-family: 'lato';
+font-weight: bold;
+}
+
+.box{
+background-color: #3D2120;
+opacity: 75%;
+border-radius: 10px;
+padding: 5px 20px;
+}
+
+=======
 .sertifikat img {
   width: 100px;
   height: 40px;
@@ -513,6 +703,7 @@
 .box img {
   margin: 0 10px;
 }
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
 
 /* AKHIR CONTACT */
 
@@ -650,6 +841,21 @@
   /* Akhir Home */
 
   /* Profile */
+<<<<<<< HEAD
+  .profile{
+    font-weight: normal;
+    padding: 20px 0;
+  }
+
+  .paragraf{
+    font-size: 18px;
+  }
+
+  .profile img{
+    width: 320px;
+    height: 320px;
+    margin: 20px 0;
+=======
   .isi {
     height: 1200px;
   }
@@ -668,6 +874,7 @@
     margin-left: 70px;
     margin-right: 60px;
     font-size: 16px;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   }
 
   .viewdetail {
@@ -679,7 +886,6 @@
     border: 3px solid #3d2120;
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 170px;
   }
 
   .viewdetail:hover {
@@ -687,6 +893,19 @@
     color: white !important;
   }
 
+<<<<<<< HEAD
+  .profile h3{
+    margin: 10px o;
+  }
+  
+  .visi{
+    background-color: #3D2120;
+    margin-bottom: 10px;
+  }
+  
+  .visi p{
+    margin: 20px 0;
+=======
   .visimisi {
     display: block;
     margin: 20px 0;
@@ -695,18 +914,36 @@
   .visi {
     background-color: #3d2120;
     color: white;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
     text-align: center;
-    padding: 20px 20px;
-    margin: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
   }
 
+<<<<<<< HEAD
+  .misi{
+    background-color: #9D5A06;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  .misi p{
+=======
   .misi {
     background-color: #9d5a06;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
     text-align: center;
-    padding: 20px 0;
-    margin-left: auto;
-    margin: 20px 0;
-    font-size: 16px;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .misi p a{
+    text-decoration: none;
+    color: #3D2120;
+  }
+
+  .misi p a:hover{
+    color: #593218 !important;
   }
 
   #ornamen2 {
@@ -715,12 +952,18 @@
   /* Akhir Profile */
 
   /* Menu About */
+<<<<<<< HEAD
+  .Mitrakepercayaan{
+    font-family: 'lato';
+    background-color: #D6CBCB;
+    height: 750px;
+=======
   .Mitrakepercayaan {
     font-family: "lato";
     background-color: #d6cbcb;
     height: 670px;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
     padding-top: 0;
-    /* border: 10px solid #9D5A06;    */
   }
 
   .mitra1 {
@@ -734,14 +977,19 @@
 
   .mitra1 h4 {
     font-size: 18px;
-    padding-bottom: 16px;
+    padding-bottom: 10px;
   }
 
+<<<<<<< HEAD
+  .mitra1 p{
+    font-size: 18px;
+=======
   .mitra1 p {
     font-size: 16px;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
     padding: 5px 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
     display: block;
   }
 
@@ -757,8 +1005,13 @@
   .mitra2 {
     padding-top: 20px;
   }
+<<<<<<< HEAD
+  .mitra2 p{
+    font-size: 18px;
+=======
   .mitra2 p {
     font-size: 16px;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
     padding: 5px 0;
     margin-left: 30px;
     margin-right: 30px;
@@ -767,11 +1020,6 @@
 
   .ornamen-mid img {
     display: none;
-    /* float: left;
-    width: 190px;
-    height: 190px;
-    margin-top: -450px;
-    margin-left: -60px; */
   }
   .ornamen-mid1 img {
     display: none;
@@ -783,11 +1031,45 @@
     padding: 2px 0;
     width: 100px;
     height: 35px;
-    /* margin-top: -5px; */
     margin-left: 190px;
   }
   /* Akhir Menu About */
 
+<<<<<<< HEAD
+/* Menu Location */
+.display-4{
+  font-size: 16px;
+  padding-top: -10px;
+  padding-bottom: 10px;
+}
+
+.backlog{
+  border: 1px solid white; 
+  max-width: 450px;
+  height: 600px;
+}
+
+.backlog .gambar{
+  width: 400px;
+  height: 450px;
+  opacity: 80%;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tekswilayah{
+  font-size: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -570px;
+  padding: 8px 0;
+}    
+/* Akhir Location */
+
+  /* Menu Contact */
+=======
   /* Menu Location */
   .display-4 {
     font-size: 16px;
@@ -845,11 +1127,17 @@
     width: 80px;
     height: 80px;
   }
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   .sertifikat {
     text-align: center;
     padding: 5px 5px;
   }
 
+<<<<<<< HEAD
+
+  .box{
+    background-color: #3D2120;
+=======
   .sertifikat p {
     margin-left: o;
   }
@@ -857,12 +1145,20 @@
   .box {
     margin-right: 0;
     background-color: #3d2120;
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
     opacity: 75%;
-    padding: 5px 0;
+    margin: 10px 0;
   }
+<<<<<<< HEAD
+  
+  .box img{
+    margin: 0 15px;
+  } 
+=======
 
   .box img {
     margin: 0 10px;
   }
+>>>>>>> eac0d1dc7d85d57c86007f29b3d221ced1f34f1d
   /* Akhir Menu COntact */
 }

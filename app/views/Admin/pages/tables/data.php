@@ -1,5 +1,8 @@
     <!-- Main content -->
     <div class="container-fluid">
+      <div class="col-lg-6">
+        <?php Flasher::flash() ?>
+      </div>
       <div class="alert alert-success" role="alert">
         <h4 class="alert-heading">Selamat datang !</h4>
         <p>Disini adalah tampilan untuk halaman dashboard produk dimana anda dapat melakukan edit dan delete data. Pada produk yang telah anda input</p>
@@ -9,9 +12,6 @@
         <p class="mb-0">2. Tombol delete berfungsi untuk menghapus produk anda</p>
         <hr>
         <p class="mb-0">3. Link Berfungsi untuk redirect ke halaman toko online anda. dan juga memesan melalui wa</p>
-      </div>
-      <div class="col-lg-6">
-        <?php Flasher::flash() ?>
       </div>
     </div>
     <div class="row">
