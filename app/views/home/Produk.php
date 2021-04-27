@@ -73,11 +73,23 @@ if($page > 1){
           </div>
         </div>  
       </div> -->
+     
+     //pagination
+      //konfigurasi
+      $JumlahDataPerhalaman = 6;
+      $JumlahData = ceil(query ("SELECT * FROM produk"));
+      $JumlahHalaman = $JumlahData / $JumlahDataPerhalaman;
+      $halamanAktif = (isset($_GET["halaman"]) ? $_GET ["halaman"] : 1;
+      $awalData = ( $JumlahDataPerhalaman *  $halamanAktif) - $JumlahDataPerhalaman;
+
+
+      $produk = query("SELECT * FROM produk LIMIT 0, $JumlahDataPerhalaman")
+
   <?php
   $readmore = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit necessitat
-      ibus velit eum, tenetur et! Placeat cupiditate quaerat accusamus laboriosam quasi, aliquam architecto, error debitis facere iure rerum nostrum illum!";
+  ibus velit eum, tenetur et! Placeat cupiditate quaerat accusamus laboriosam quasi, aliquam architecto, error debitis facere iure rerum nostrum illum!";
   ?>
-  <!-- <img src ="img/gawean1.png" class="logo"> -->
+  <img src ="app/file/img/gawean1.png" class="logo">
   <div class="container">
     <div class="row">
       <?php
@@ -86,6 +98,7 @@ if($page > 1){
       // var_dump($dataproduk);
       foreach ($data['produk'] as $produk) {
       ?>
+
       
         <!-- <div class="row"> -->
         <div class="col-sm-4">
@@ -120,20 +133,32 @@ if($page > 1){
       ?>
     </div>
   </div>
+
+  //navigasi
+    <?php if ($halamanAktif > 1) : ?>
+    <a href="?halaman<?= $halamanAktif -1; ?">&laquo </a>
+    <?php end if; ?>
+    
+    <?php for ($i = 1; $i <= $JumlahHalaman; $i++) : ?>
+      <?php if ($i == $halamanAktif ): ?>
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
       <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">Previous</a>
+        <a class="page-link" href="?halaman<?= $halamanAktif -1; ?">Previous</a>
       </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="">1</a></li>
       <li class="page-item"><a class="page-link" href="#">2</a></li>
       <li class="page-item"><a class="page-link" href="#">3</a></li>
       <li class="page-item">
-        <a class="page-link" href="#">Next</a>
+        <a class="page-link" href="?halaman<?= $halamanAktif 1; ?">Next</a>
+        <?php echo $i; ?>
       </li>
-    </ul>
-  </nav>
-  <!-- <div class="col-md-3">
+      </ul>
+      </nav>
+      <?php endfor; ?>
+
+    
+      <div class="col-md-3">
           <div class="thumbnail">
             <div class="card-body">
               <div class="card-bg">
@@ -147,10 +172,7 @@ if($page > 1){
         </div>
       </div>
     </div>
-  -->
-
-
-  <!-- </div> -->
+   </div>
 
 
 
