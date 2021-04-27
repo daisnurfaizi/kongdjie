@@ -6,7 +6,7 @@ class Home extends Controller
         //echo'home/index';
         $data['judul'] = 'home';
         $data['nama'] = $this->model('User_model')->getUser();
-        $this->view('home/index2', $data);
+        $this->view('home/Home', $data);
     }
     public function Beranda()
     {
