@@ -77,4 +77,21 @@ class Frencise_model
         $this->db->execute();
         return $this->db->resultSet();
     }
+
+    public function dataFrenchise($provinsi)
+    {
+        if ($provinsi == "jabodetabek") {
+
+            $query = "SELECT * FROM franchise  WHERE kabupaten like '%jakarta%' or kabupaten like '%bogor%' or kabupaten like '%depok%' or kabupaten like '%tangerang%' or kabupaten like '%bekasi%'";
+            $this->db->query($query);
+            $this->db->execute();
+            return $this->db->resultSet();
+        } else {
+            $query = "SELECT * FROM franchise  WHERE provinsi =:$provinsi ";
+            $this->db->query($query);
+            $this->db->bind('provinsi', $provinsi);
+            $this->db->execute();
+            return $this->db->resultSet();
+        }
+    }
 }

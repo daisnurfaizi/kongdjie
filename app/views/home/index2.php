@@ -148,21 +148,22 @@
   <section class="product" id="product">
     <div class="container text-center">
       <div class="row">
-
-        <div class="col produk">
-          <div class="card">
-            <img src="<?= BASEURL, PORT, LOCATION ?>/img/KongDjie_Gayo.png" class="card-img-top" alt="Gayo-Coffee">
-            <div class="card-body">
-              <h5 class="card-title">Gayo Coffee</h5>
-              <p class="card-text"> Rp. 100.000 ,- </p>
-            </div>
-            <div class="card-footer">
-              <a href="" class="text-muted"> Order Now </a>
+        <?php foreach ($data['produk'] as $produk) : ?>
+          <div class="col produk">
+            <div class="card">
+              <img src="<?= BASEURL, PORT, LOCATION ?>/img/<?= $produk['gambar'] ?>" class="card-img-top" alt="Gayo-Coffee">
+              <div class="card-body">
+                <h5 class="card-title"><?= $produk['nama_produk'] ?></h5>
+                <p class="card-text"> Rp. <?= $produk['harga'] ?> ,- </p>
+              </div>
+              <div class="card-footer">
+                <a href="" class="text-muted"> Order Now </a>
+              </div>
             </div>
           </div>
-        </div>
+        <?php endforeach; ?>
 
-        <div class="col produk">
+        <!-- <div class="col produk">
           <div class="card ">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/KongDjie_Mandheling.png" class="card-img-top" alt="Mandheling-Coffee">
             <div class="card-body">
@@ -210,11 +211,11 @@
               <a href="" class="text-muted"> Order Now </a>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col produk next">
           <p> All Product </p>
-          <a href="" class="text-muted"> Click Here --> </a>
+          <a href="<?= BASEURL, PORT, LOCATION ?>/HOME/Produk" class="text-muted"> Click Here --> </a>
         </div>
       </div>
     </div>

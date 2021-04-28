@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Popup Boostrap 4</title>
-  <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION; ?>/css/style2.css">
+  <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION; ?>/css/produk.css">
   <link rel="icon" type="image/png" href="<?= BASEURL, PORT, LOCATION; ?>/img/logo.png">
   <link rel="stylesheet" href="<?= BASEURL, PORT, LOCATION; ?>/css/produk1.css">
 
