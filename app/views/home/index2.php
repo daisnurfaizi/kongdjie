@@ -9,8 +9,10 @@
   <!-- Bootstrap CSS -->
   <!-- <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION ?>/css/bootstrap.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION ?>/css/style.css">
+  <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION ?>/css/style2.css">
   <link rel="icon" type="image/png" href="<?= BASEURL, PORT, LOCATION ?>/img/logo.png">
+  <script scr="<?= BASEURL, PORT, LOCATION ?>/js/jquery-3.6.0.min.js">
+  </script>
 
   <title>Kong Djie Coffe!</title>
 </head>
@@ -55,7 +57,7 @@
         <div class="row justify-content-between info1">
           <div class="col-md-4 ">
             <p> Ingin Bermitra <br> Klik : </p>
-            <a href="" class="btn btn-home btn1"> Join Us </a>
+            <a href="#All" class="btn btn-home btn1"> Join Us </a>
           </div>
           <div class="col-md-4">
             <a href="" class="btn btn-home btn2"> About Us </a>
@@ -163,58 +165,9 @@
           </div>
         <?php endforeach; ?>
 
-        <!-- <div class="col produk">
-          <div class="card ">
-            <img src="<?= BASEURL, PORT, LOCATION ?>/img/KongDjie_Mandheling.png" class="card-img-top" alt="Mandheling-Coffee">
-            <div class="card-body">
-              <h5 class="card-title"> Mandheling Coffee </h5>
-              <p class="card-text"> Rp. 100.000 ,- </p>
-            </div>
-            <div class="card-footer">
-              <a href="" class="text-muted"> Order Now </a>
-            </div>
-          </div>
-        </div>
-        <div class="col produk">
-          <div class="card ">
-            <img src="<?= BASEURL, PORT, LOCATION ?>/img/KongDjie_Toraja.png" class="card-img-top" alt="Toraja-Coffee">
-            <div class="card-body">
-              <h5 class="card-title"> Toraja Coffee </h5>
-              <p class="card-text"> Rp. 100.000 ,- </p>
-            </div>
-            <div class="card-footer">
-              <a href="" class="text-muted"> Order Now </a>
-            </div>
-          </div>
-        </div>
-        <div class="col produk">
-          <div class="card ">
-            <img src="<?= BASEURL, PORT, LOCATION ?>/img/KongDjie_Kopi.png" class="card-img-top" alt="Original-Coffee">
-            <div class="card-body">
-              <h5 class="card-title"> Original Coffee </h5>
-              <p class="card-text"> Rp. 100.000 ,- </p>
-            </div>
-            <div class="card-footer">
-              <a href="" class="text-muted"> Order Now </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col produk">
-          <div class="card ">
-            <img src="<?= BASEURL, PORT, LOCATION ?>/img/KongDjie_Coklat.png" class="card-img-top" alt="Cokelat-Coffee">
-            <div class="card-body">
-              <h5 class="card-title"> Cokelat Coffee </h5>
-              <p class="card-text"> Rp. 100.000 ,- </p>
-            </div>
-            <div class="card-footer">
-              <a href="" class="text-muted"> Order Now </a>
-            </div>
-          </div>
-        </div> -->
 
         <div class="col produk next">
-          <p> All Product </p>
+          <p id="All"> All Product </p>
           <a href="<?= BASEURL, PORT, LOCATION ?>/HOME/Produk" class="text-muted"> Click Here --> </a>
         </div>
       </div>
@@ -280,7 +233,7 @@
       </div>
       <div class="row justify-content-center ">
         <div class="col-md-4">
-          <a href="" class="btn join"> Join Us </a>
+          <a href="#All" class="btn join"> Join Us </a>
         </div>
       </div>
     </div>
@@ -305,39 +258,38 @@
       </div>
       <div class="row tekswilayah justify-content-center">
         <div class="col-4 text-left">
-          <a class="wilayah1" href="#">JABODETABEK</a>
-          <a class="wilayah1" href="#">JAWA BARAT</a>
-          <a class="wilayah1" href="#">JAWA TENGAH</a>
-          <a class="wilayah1" href="#">JAWA TIMUR</a>
-          <a class="wilayah1" href="#">BALI</a>
-          <a class="wilayah1" href="#">ACEH</a>
-          <a class="wilayah1" href="#">SUMATERA UTARA</a>
-          <a class="wilayah1" href="#">SUMATERA BARAT</a>
-          <a class="wilayah1" href="#">SUMATERA SELATAN</a>
-          <a class="wilayah1" href="#">RIAU</a>
-          <a class="wilayah1" href="#">JAMBI</a>
-          <a class="wilayah1" href="#">BENGKULU</a>
-          <a class="wilayah1" href="#">LAMPUNG</a>
-          <a class="wilayah1" href="#">NUSA TENGARA TIMUR</a>
-          <a class="wilayah1" href="#">NUSA TENGARA BARAT</a>
-          <a class="wilayah1" href="#">KEP. RIAU</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JABODETABEK">JABODETABEK</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JAWA-BARAT">JAWA BARAT</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JAWA-TENGAH">JAWA TENGAH</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JAWA-TIMUR">JAWA TIMUR</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/BALI">BALI</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/ACEH">ACEH</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SUMATERA-UTARA">SUMATERA UTARA</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SUMATERA-BARAT">SUMATERA BARAT</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SUMATERA-SELATAN">SUMATERA SELATAN</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/RIAU">RIAU</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JAMBI">JAMBI</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/BENGKULU">BENGKULU</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/LAMPUNG">LAMPUNG</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/NUSA-TENGARA-TIMUR">NUSA TENGARA TIMUR</a>
+          <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/NUSA-TENGARA-BARAT">NUSA TENGARA BARAT</a>
         </div>
         <div class="col-4 text-right">
-          <a class="wilayah2" href="#">KEP. BANGKA</a>
-          <a class="wilayah2" href="#">KALIMANTAN UTARA</a>
-          <a class="wilayah2" href="#">KALIMANTAN SELATAN</a>
-          <a class="wilayah2" href="#">KALIMANTAN BARAT</a>
-          <a class="wilayah2" href="#">KALIMANTAN TENGAH</a>
-          <a class="wilayah2" href="#">SULAWESI UTARA</a>
-          <a class="wilayah2" href="#">SULAWESI BARAT</a>
-          <a class="wilayah2" href="#">SULAWESI TENGAH</a>
-          <a class="wilayah2" href="#">SULAWESI SELATAN</a>
-          <a class="wilayah2" href="#">SULAWESI TENGGARA</a>
-          <a class="wilayah2" href="#">GORONTALO</a>
-          <a class="wilayah2" href="#">MALUKU</a>
-          <a class="wilayah2" href="#">MALUKU UTARA</a>
-          <a class="wilayah2" href="#">PAPUA BARAT</a>
-          <a class="wilayah2" href="#">PAPUA</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KEPULAUAN-BANGKA-BELITUNG">KEPULAUAN BANGKA BELITUNG</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KALIMANTAN-UTARA">KALIMANTAN UTARA</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KALIMANTAN-SELATAN">KALIMANTAN SELATAN</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KALIMANTAN-BARAT">KALIMANTAN BARAT</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KALIMANTAN-TENGAH">KALIMANTAN TENGAH</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SULAWESI-UTARA">SULAWESI UTARA</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SULAWESI-BARAT">SULAWESI BARAT</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SULAWESI-TENGAH">SULAWESI TENGAH</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SULAWESI-SELATAN">SULAWESI SELATAN</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/SULAWESI-TENGGARA">SULAWESI TENGGARA</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/GORONTALO">GORONTALO</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/MALUKU">MALUKU</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/MALUKU-UTARA">MALUKU UTARA</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/PAPUA-BARAT">PAPUA BARAT</a>
+          <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/PAPUA">PAPUA</a>
         </div>
       </div>
     </div>
@@ -403,12 +355,9 @@
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="<?= BASEURL, PORT, LOCATION ?>/https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-  <script>
-    scr = "<?= BASEURL, PORT, LOCATION ?>/js/jquery-3.6.0.min.js"
-  </script>
-  <script>
-    scr = "<?= BASEURL, PORT, LOCATION ?>/js/KongDjie1.js"
+  <!-- <script src="<?= BASEURL, PORT, LOCATION ?>/https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+  <!-- <script> -->
+  <script scr="<?= BASEURL, PORT, LOCATION ?>/js/KongDjie1.js">
   </script>
 
 

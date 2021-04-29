@@ -23,10 +23,4 @@ class Home extends Controller
         $data['produk'] = $this->model('Product_model')->getprodukall();
         $this->view('home/Produk', $data);
     }
-
-    public function Franchise()
-    {
-        $data['produk'] = $this->model('Product_model')->getNewProduct();
-        $this->view('home/Franchise', $data);
-    }
 }

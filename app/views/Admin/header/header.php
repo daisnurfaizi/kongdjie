@@ -158,6 +158,12 @@
                                         <p>Data User Admin</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/HalamanDepan" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Halaman Depan</p>
+                                    </a>
+                                </li>
 
                             </ul>
                         </li>
