@@ -66,13 +66,13 @@
 
         <div class="row">
           <div class="col-md-5">
-            <a href="profile"><img src="<?= BASEURL, PORT, LOCATION ?>/img/0111-instagram.png" alt="instagram-Logo" class="instagram"></a>
+            <a href="<?= $data['content'][0]['instagram'] ?>"><img src="<?= BASEURL, PORT, LOCATION ?>/img/0111-instagram.png" alt="instagram-Logo" class="instagram"></a>
           </div>
           <div class="col-md-2">
             <h4> kongdjieoffice </h4>
           </div>
           <div class="col-md-5">
-            <a href=""><img src="<?= BASEURL, PORT, LOCATION ?>/img/031-facebook.png" alt="Facebook-Logo" class="facebook"></a>
+            <a href="<?= $data['content'][0]['facebook'] ?>"><img src="<?= BASEURL, PORT, LOCATION ?>/img/031-facebook.png" alt="Facebook-Logo" class="facebook"></a>
           </div>
         </div>
 
@@ -303,19 +303,19 @@
         <div class="col-md-5">
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/pin-512.png" alt="Maps-Logo" class="float-left">
-            <p>Taman Palem Mutiara Blok B7 no.30 Cengkareng Timur, Jakarta Barat</p>
+            <p><?= $data['content'][0]['alamat'] ?></p>
           </div>
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/email.png" alt="Email-Logo" class="float-left" id="email">
-            <p>kngdjcr43@gmail.com</p>
+            <p><?= $data['content'][0]['email'] ?></p>
           </div>
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/PHONE.png" alt="Phone-Logo" class="float-left">
-            <p>(021-22654327)</p>
+            <p>(<?= $data['content'][0]['notlp'] ?>)</p>
           </div>
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/003-whatsapp.png" alt="WhatsApp" class="float-left">
-            <p>(+62-12334567891011)</p>
+            <p>(<?= $data['content'][0]['wa'] ?>)</p>
           </div>
         </div>
 

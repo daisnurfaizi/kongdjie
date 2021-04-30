@@ -41,27 +41,37 @@
               <thead>
                 <tr>
                   <!-- <th>Rendering engine</th> -->
-                  <th>Nama</th>
-                  <th>Username</th>
-                  <th>Level</th>
-                  <th>Update</th>
-                  <th>Delete</th>
+                  <th>Profile</th>
+                  <th>Email</th>
+                  <th>No TLP</th>
+                  <th>No WA</th>
+                  <th>Facebook</th>
+                  <th>Instagram</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
-                foreach ($data['useradmin'] as $user) :
+                foreach ($data['content'] as $halaman) :
                 ?>
                   <tr>
                     <!-- <td>Trident</td> -->
                     <td>
-                      <?= $user['nama'] ?>
+                      <?= $halaman['profile'] ?>
                     </td>
                     <td>
-                      <?= $user['username'] ?>
+                      <?= $halaman['email'] ?>
                     </td>
                     <td>
-                      <?= $user['level'] ?>
+                      <?= $halaman['notlp'] ?>
+                    </td>
+                    <td>
+                      <?= $halaman['wa'] ?>
+                    </td>
+                    <td>
+                      <?= $halaman['facebook'] ?>
+                    </td>
+                    <td>
+                      <?= $halaman['instagram'] ?>
                     </td>
                     <td>
                       <button id="updatedata" type="button" class="btn btn-primary float-lg-left mr-1" data-iduser="<?= $user['id'] ?>" data-toggle="modal" data-target="#exampleModal" data-nama="<?= $user['nama'] ?>" data-username="<?= $user['username'] ?>" data-password="<?= $user['password'] ?>">Update</button>
@@ -77,11 +87,12 @@
               <tfoot>
                 <tr>
                   <!-- <th>Rendering engine</th> -->
-                  <th>Nama</th>
-                  <th>Username</th>
-                  <th>Level</th>
-                  <th>Update</th>
-                  <th>Delete</th>
+                  <th>Profile</th>
+                  <th>Email</th>
+                  <th>No TLP</th>
+                  <th>No WA</th>
+                  <th>Facebook</th>
+                  <th>Instagram</th>
                 </tr>
 
               </tfoot>
