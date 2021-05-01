@@ -273,9 +273,22 @@ class Admin extends Controller
         $this->model('Login_model')->cekUser();
 
         $data['judul'] = 'Data User Admin';
-        $data['useradmin'] = $this->model('User_model')->getuserall();
+        $data['content'] = $this->model('Halaman_model')->getHalamanData();
         $this->view('Admin/header/header');
         $this->view('Admin/pages/tables/datahalamanhome', $data);
         $this->view('Admin/footer/footer');
+    }
+    // update halaman depan
+    public function updateHalamandepan()
+    {
+        if ($this->model('Halaman_model')->UpdateHalaman($_POST) > 0) {
+            Flasher::setFlash('berhasil', ' Diupdate ', 'alert-success');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/HalamanDepan');
+            exit();
+        } else {
+            Flasher::setFlash('gagal', 'update', 'alert-danger');
+            header('location:' . BASEURL . PORT . LOCATION . '/admin/HalamanDepan');
+            exit();
+        }
     }
 }
