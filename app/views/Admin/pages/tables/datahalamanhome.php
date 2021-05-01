@@ -5,21 +5,13 @@
       </div>
       <div class="alert alert-warning" role="alert">
         <h4 class="alert-heading">Halaman Depan !</h4>
-        <p>Disini adalah tampilan untuk halaman dashboard Data Admin dimana anda dapat melakukan edit dan delete data. Pada Admin yang telah anda input</p>
+        <p>Disini adalah tampilan untuk halaman dimana anda dapat melakukan editing yang nantinya akan berpengaruh di halaman landingpage anda</p>
         <hr>
-        <p class="mb-0">1. Tombol update berfungsi untuk melakukan update data Admin anda</p>
+        <p class="mb-0">1. Tombol update berfungsi untuk melakukan update data landingpage</p>
         <hr>
-        <p class="mb-0">2. Tombol delete berfungsi untuk menghapus Admin anda</p>
+
       </div>
-      <div class="alert alert-danger" role="alert">
-        <h4 class="alert-heading">Rule unutuk user admin</h4>
-        <hr>
-        <p class="mb-0">1. Level untuk memberikan peringkat hak akses pada web anda terdapat 2 level</p>
-        <hr>
-        <p class="mb-0">Level Admin: Adalah role user yang bisa membuat dan menghapus user admin lainya</p>
-        <hr>
-        <p class="mb-0">Level User: Adalah role user yang tidak bisa membuat dan menghapus user admin lainya</p>
-      </div>
+
     </div>
     <div class="row">
       <div class="col-12">
@@ -33,7 +25,7 @@
 
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Data $user</h3>
+            <h3 class="card-title">Content Halaman Landing Page</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
@@ -41,12 +33,14 @@
               <thead>
                 <tr>
                   <!-- <th>Rendering engine</th> -->
-                  <th>Profile</th>
+                  <!-- <th>Profile</th> -->
                   <th>Email</th>
                   <th>No TLP</th>
+                  <th>Alamat</th>
                   <th>No WA</th>
                   <th>Facebook</th>
                   <th>Instagram</th>
+                  <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -55,14 +49,17 @@
                 ?>
                   <tr>
                     <!-- <td>Trident</td> -->
-                    <td>
-                      <?= $halaman['profile'] ?>
-                    </td>
+                    <!-- <td> -->
+
+                    <!-- </td> -->
                     <td>
                       <?= $halaman['email'] ?>
                     </td>
                     <td>
                       <?= $halaman['notlp'] ?>
+                    </td>
+                    <td>
+                      <?= $halaman['alamat'] ?>
                     </td>
                     <td>
                       <?= $halaman['wa'] ?>
@@ -74,10 +71,7 @@
                       <?= $halaman['instagram'] ?>
                     </td>
                     <td>
-                      <button id="updatedata" type="button" class="btn btn-primary float-lg-left mr-1" data-iduser="<?= $user['id'] ?>" data-toggle="modal" data-target="#exampleModal" data-nama="<?= $user['nama'] ?>" data-username="<?= $user['username'] ?>" data-password="<?= $user['password'] ?>">Update</button>
-                    </td>
-                    <td>
-                      <a href="<?= BASEURL, PORT, LOCATION; ?>/admin/deleteuser/<?= $user['id']; ?>" class="btn btn-danger float-lg-left mr-1" onclick="return confirm('yakin')">Delete</a>
+                      <button id="updatedata" type="button" class="btn btn-primary float-lg-left mr-1" data-idhalaman="<?= $halaman['id'] ?>" data-toggle="modal" data-target="#exampleModal" data-profile="<?= $halaman['profile'] ?>" data-notlp="<?= $halaman['notlp'] ?>" data-email="<?= $halaman['email'] ?>" data-alamat="<?= $halaman['alamat'] ?> " data-wa="<?= $halaman['wa'] ?> " data-facebook="<?= $halaman['facebook'] ?> " data-instagram="<?= $halaman['instagram'] ?> ">Update</button>
                     </td>
                   </tr>
                 <?php
@@ -87,12 +81,14 @@
               <tfoot>
                 <tr>
                   <!-- <th>Rendering engine</th> -->
-                  <th>Profile</th>
+                  <!-- <th>Profile</th> -->
                   <th>Email</th>
                   <th>No TLP</th>
+                  <th>Alamat</th>
                   <th>No WA</th>
                   <th>Facebook</th>
                   <th>Instagram</th>
+                  <th>Aksi</th>
                 </tr>
 
               </tfoot>
@@ -117,26 +113,36 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="<?= BASEURL, PORT, LOCATION; ?>/admin/ubahuser" method="POST">
-              <input type="hidden" class="form-control" id="iduser" placeholder="id" name="id">
+            <form action="<?= BASEURL, PORT, LOCATION; ?>/admin/updateHalamandepan" method="POST">
+              <input type="hidden" class="form-control" id="idhalaman" placeholder="id" name="id">
               <div class="form-group">
-                <label for="exampleInputEmail1">Nama</label>
-                <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
+                <label for="exampleInputEmail1">Profile</label>
+                <input type="text" class="form-control" id="profile" placeholder="profile" name="profile">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                <label for="exampleInputPassword1">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="email" name="email">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                <label for="exampleInputPassword1">Notlp</label>
+                <input type="number" step="1" min="0" max="999999999999" maxlength="13" inputmode="numeric" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" id="notlp" placeholder="notlp" name="notlp">
               </div>
               <div class="form-group">
-                <label id="level">Level</label>
-                <select id="form_kab" class="form-control select2 select2-danger" name="level" required data-dropdown-css-class="select2-danger" style="width: 100%;">
-                  <option value="admin">Admin</option>
-                  <option value="user" selected>User</option>
-                </select>
+                <label for="exampleInputPassword1">Alamat</label>
+                <textarea class="form-control" id="alamat" placeholder="alamat" name="alamat"></textarea>
+                <!-- <textarea class="form-control" id="alamat" placeholder="alamat" name="alamat"><textarea> -->
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">wa</label>
+                <input type="number" step="1" min="0" max="999999999999" maxlength="13" inputmode="numeric" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" id="wa" placeholder="wa" name="wa">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">facebook</label>
+                <input type="text" class="form-control" id="facebook" placeholder="facebook" name="facebook">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">instagram</label>
+                <input type="text" class="form-control" id="instagram" placeholder="instagram" name="instagram">
               </div>
           </div>
           <div class="modal-footer">
@@ -150,15 +156,23 @@
     <script>
       $(document).ready(function() {
         $(document).on('click', '#updatedata', function() {
-          var iduser = $(this).data('iduser')
-          var nama = $(this).data('nama')
-          var username = $(this).data('username')
-          var password = $(this).data('password')
+          var idhalaman = $(this).data('idhalaman')
+          var profile = $(this).data('profile')
+          var notlp = $(this).data('notlp')
+          var email = $(this).data('email')
+          var alamat = $(this).data('alamat')
+          var wa = $(this).data('wa')
+          var facebook = $(this).data('facebook')
+          var instagram = $(this).data('instagram')
           // console.log(nama$user)
-          $('#iduser').val(iduser)
-          $('#username').val(username)
-          $('#nama').val(nama)
-          $('#password').val(password)
+          $('#idhalaman').val(idhalaman)
+          $('#profile').val(profile)
+          $('#notlp').val(notlp)
+          $('#email').val(email)
+          $('#alamat').val(alamat)
+          $('#wa').val(wa)
+          $('#facebook').val(facebook)
+          $('#instagram').val(instagram)
 
         })
       })

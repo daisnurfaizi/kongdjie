@@ -33,7 +33,7 @@
           <a class="nav-link" href="#home">home</a>
           <a class="nav-link" href="#profile">profile</a>
           <a class="nav-link" href="#product">product</a>
-          <a class="nav-link" href="#franchise">franchise</a>
+          <a class="nav-link" href="#All">franchise</a>
           <a class="nav-link" href="#about1">about</a>
           <a class="nav-link" href="#location">location</a>
           <a class="nav-link" href="#contact">Contact</a>
@@ -189,7 +189,7 @@
             </div>
             <div class="col-lg info2 text-center">
               <p> Hubungi Kami : </p>
-              <a href="">
+              <a href="https://wa.me/<?= $data['content'][0]['wa'] ?>?text=">
                 <img src="<?= BASEURL, PORT, LOCATION ?>/img/whatsapp.png" alt="WhatsApp">
               </a>
             </div>
