@@ -1,6 +1,5 @@
 <!-- <!doctype html> -->
 <html lang="en">
-  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,50 +17,6 @@
       <img src="<?= BASEURL, PORT, LOCATION ?>/img/logo.png">
       <p>CV. KONDJIE HAMPARAN RASA</p>    
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav mx-auto">
-            <a class="nav-link" href="#home">home</a>
-            <a class="nav-link" href="#profile">profile</a>
-            <a class="nav-link" href="#product">product</a>
-            <a class="nav-link" href="#franchise">franchise</a>
-            <a class="nav-link" href="#about1">about</a>
-            <a class="nav-link" href="#location">location</a>
-            <a class="nav-link" href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- akhir navbar -->
-
-    
-    <!-- Jumbotron Header  -->
-    <section class="home" id="home"> 
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-sm-12">
-              <img src="<?= BASEURL, PORT, LOCATION ?>/img/LogoKongDjieHome.png" alt="Logo-KongDjie">
-            </div>
-          </div>
-
-          <div class="row justify-content-between info1">
-            <div class="col-md-4 ">
-              <p> Ingin Bermitra <br> Klik : </p>
-              <a href="#All" class="btn btn-home btn1"> Join Us </a>
-            </div>
-            <div class="col-md-4">
-              <a href="#profile" class="btn btn-home btn2"> About Us </a>
-            </div>
-          </div> 
-
-          <div class="row">
-            <div class="col-md-5">
-              <a href="profile"><img src="<?= BASEURL, PORT, LOCATION ?>/img/0111-instagram.png" alt="instagram-Logo" class="instagram"></a>
             </div>
             <div class="col-md-2">
               <h4> kongdjieoffice </h4>
