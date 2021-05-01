@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Popup Boostrap 4</title>
-  <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION; ?>/css/style2.css">
+  <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION; ?>/css/produk.css">
   <link rel="icon" type="image/png" href="<?= BASEURL, PORT, LOCATION; ?>/img/logo.png">
   <link rel="stylesheet" href="<?= BASEURL, PORT, LOCATION; ?>/css/produk1.css">
 
@@ -18,19 +18,19 @@
 </head>
 
 <body style="background: #3D2120;">
-<?php
-$perpage = 10;
-if(isset($_GET['page'])){
-  $page = $_GET['page'];
-}else{
-  $page = 1;
-}
-if($page > 1){
-  $start = ($page* $perpage) - $perpage;
-}else{
-  $start = 0;
-}
-?>
+  <?php
+  $perpage = 10;
+  if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+  } else {
+    $page = 1;
+  }
+  if ($page > 1) {
+    $start = ($page * $perpage) - $perpage;
+  } else {
+    $start = 0;
+  }
+  ?>
   <div class="logatas">
     <img src="<?= BASEURL, PORT, LOCATION; ?>/img/logo.png">
     <p>Product</p>
@@ -73,33 +73,33 @@ if($page > 1){
           </div>
         </div>  
       </div> -->
-     
-     //pagination
-      //konfigurasi
-      $JumlahDataPerhalaman = 6;
-      $JumlahData = ceil(query ("SELECT * FROM produk"));
-      $JumlahHalaman = $JumlahData / $JumlahDataPerhalaman;
-      $halamanAktif = (isset($_GET["halaman"]) ? $_GET ["halaman"] : 1;
-      $awalData = ( $JumlahDataPerhalaman *  $halamanAktif) - $JumlahDataPerhalaman;
+
+  //pagination
+  //konfigurasi
+  $JumlahDataPerhalaman = 6;
+  $JumlahData = ceil(query ("SELECT * FROM produk"));
+  $JumlahHalaman = $JumlahData / $JumlahDataPerhalaman;
+  $halamanAktif = (isset($_GET["halaman"]) ? $_GET ["halaman"] : 1;
+  $awalData = ( $JumlahDataPerhalaman * $halamanAktif) - $JumlahDataPerhalaman;
 
 
-      $produk = query("SELECT * FROM produk LIMIT 0, $JumlahDataPerhalaman")
+  $produk = query("SELECT * FROM produk LIMIT 0, $JumlahDataPerhalaman")
 
   <?php
   $readmore = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit necessitat
   ibus velit eum, tenetur et! Placeat cupiditate quaerat accusamus laboriosam quasi, aliquam architecto, error debitis facere iure rerum nostrum illum!";
   ?>
-  <img src ="app/file/img/gawean1.png" class="logo">
+  <img src="app/file/img/gawean1.png" class="logo">
   <div class="container">
     <div class="row">
       <?php
       $dataproduk = count($data['produk']);
-      $halaman = ceil($dataproduk/$perpage);
+      $halaman = ceil($dataproduk / $perpage);
       // var_dump($dataproduk);
       foreach ($data['produk'] as $produk) {
       ?>
 
-      
+
         <!-- <div class="row"> -->
         <div class="col-sm-4">
           <div class="card">
@@ -135,44 +135,27 @@ if($page > 1){
   </div>
 
   //navigasi
-    <?php if ($halamanAktif > 1) : ?>
-    <a href="?halaman<?= $halamanAktif -1; ?">&laquo </a>
-    <?php end if; ?>
-    
-    <?php for ($i = 1; $i <= $JumlahHalaman; $i++) : ?>
-      <?php if ($i == $halamanAktif ): ?>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-      <li class="page-item disabled">
-        <a class="page-link" href="?halaman<?= $halamanAktif -1; ?">Previous</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="?halaman<?= $halamanAktif 1; ?">Next</a>
-        <?php echo $i; ?>
-      </li>
-      </ul>
-      </nav>
-      <?php endfor; ?>
 
-    
-      <div class="col-md-3">
-          <div class="thumbnail">
-            <div class="card-body">
-              <div class="card-bg">
-                <img src="img/KongDjie_Toraja.png" style="width:170px" class="card-img-top">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+  </li>
+  </ul>
+  </nav>
+
+
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <div class="card-body">
+        <div class="card-bg">
+          <img src="img/KongDjie_Toraja.png" style="width:170px" class="card-img-top">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
-   </div>
+  </div>
+  </div>
+  </div>
+  </div>
 
 
 

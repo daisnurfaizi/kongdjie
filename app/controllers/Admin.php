@@ -267,4 +267,15 @@ class Admin extends Controller
             exit();
         }
     }
+    // halaman depan
+    public function HalamanDepan()
+    {
+        $this->model('Login_model')->cekUser();
+
+        $data['judul'] = 'Data User Admin';
+        $data['useradmin'] = $this->model('User_model')->getuserall();
+        $this->view('Admin/header/header');
+        $this->view('Admin/pages/tables/datahalamanhome', $data);
+        $this->view('Admin/footer/footer');
+    }
 }

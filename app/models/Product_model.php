@@ -141,4 +141,13 @@ class Product_model
         $this->db->execute();
         return $this->db->RowCount();
     }
+
+    // produk terbaru 
+    public function getNewProduct()
+    {
+        $query = "SELECT * FROM product ORDER BY created_at DESC limit 5";
+        $this->db->query($query);
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }
