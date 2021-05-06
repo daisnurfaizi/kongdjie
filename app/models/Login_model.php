@@ -20,7 +20,7 @@ class Login_model
         if (!empty($datalogin)) {
             session_start();
             $_SESSION['username'] = $data['username'];
-            $_SESSION['password'] = $data['password'];
+            $_SESSION['level'] = $datalogin['level'];
             header('location:' . BASEURL . PORT . LOCATION . '/Admin/adminpage');
         }
         return $datalogin;

@@ -7,6 +7,7 @@ class Home extends Controller
         $data['judul'] = 'home';
         $data['nama'] = $this->model('User_model')->getUser();
         $data['produk'] = $this->model('Product_model')->getNewProduct();
+        $data['content'] = $this->model('Halaman_model')->getHalamanData();
         $this->view('home/index2', $data);
     }
     public function Beranda()

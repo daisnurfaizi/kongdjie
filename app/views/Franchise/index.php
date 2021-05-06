@@ -76,6 +76,9 @@
     <!-- ABOUT -->
 
     <!-- Akhir Produk -->
+    <style>
+
+    </style>
 
     <!-- Location -->
     <h3 class="display-4 mt-5 text-center">Info lokasi mitra kongdjie coffee</h3>
@@ -98,7 +101,7 @@
                         <th><?= $no++ ?></th>
                         <th><?= $franchise['namafranchise'] ?></th>
                         <th>
-                            <?= $franchise['alamat'] . " Desa/Kelurahan " . $franchise['desa'] . ", Kecamatan " . $franchise['kecamatan'] . ", " . $franchise['kabupaten'] . ", Provinsi " . $franchise['provinsi'] ?>
+                          <textarea disabled name='' id='' cols='100' rows='4' >  <?= $franchise['alamat'] . " Desa/Kelurahan " . $franchise['desa'] . ", Kecamatan " . $franchise['kecamatan'] . ", " . $franchise['kabupaten'] . ", Provinsi " . $franchise['provinsi'] ?></textarea>
                         </th>
                     </tr>
                 <?php

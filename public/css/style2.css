@@ -137,20 +137,7 @@
   background-color: #9d5a06;
   color: white !important;
 }
-.modal {
-  font-family: "lato";
-  font-size: 16px;
-  text-transform: uppercase;
-}
-.modal-header {
-  background-color: #3d2120;
-  color: white !important;
-}
 
-.modal-header h3 {
-  text-align: center;
-  font-size: 20px;
-}
 .vm h3 {
   font-size: 28px;
   font-weight: bold;

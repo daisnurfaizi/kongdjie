@@ -11,9 +11,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION ?>/css/style2.css">
   <link rel="icon" type="image/png" href="<?= BASEURL, PORT, LOCATION ?>/img/logo.png">
+  <!-- ini dari bulut -->
   <style>
-    #more {display: none;}
-    </style>
+    #more {
+      display: none;
+    }
+  </style>
   <script scr="<?= BASEURL, PORT, LOCATION ?>/js/jquery-3.6.0.min.js">
   </script>
 
@@ -36,7 +39,7 @@
           <a class="nav-link" href="#home">home</a>
           <a class="nav-link" href="#profile">profile</a>
           <a class="nav-link" href="#product">product</a>
-          <a class="nav-link" href="#franchise">franchise</a>
+          <a class="nav-link" href="#All">franchise</a>
           <a class="nav-link" href="#about1">about</a>
           <a class="nav-link" href="#location">location</a>
           <a class="nav-link" href="#contact">Contact</a>
@@ -69,13 +72,13 @@
 
         <div class="row">
           <div class="col-md-5">
-            <a href="profile"><img src="<?= BASEURL, PORT, LOCATION ?>/img/0111-instagram.png" alt="instagram-Logo" class="instagram"></a>
+            <a href="<?= $data['content'][0]['instagram'] ?>"><img src="<?= BASEURL, PORT, LOCATION ?>/img/0111-instagram.png" alt="instagram-Logo" class="instagram"></a>
           </div>
           <div class="col-md-2">
             <h4> kongdjieoffice </h4>
           </div>
           <div class="col-md-5">
-            <a href=""><img src="<?= BASEURL, PORT, LOCATION ?>/img/031-facebook.png" alt="Facebook-Logo" class="facebook"></a>
+            <a href="<?= $data['content'][0]['facebook'] ?>"><img src="<?= BASEURL, PORT, LOCATION ?>/img/031-facebook.png" alt="Facebook-Logo" class="facebook"></a>
           </div>
         </div>
 
@@ -192,7 +195,7 @@
             </div>
             <div class="col-lg info2 text-center">
               <p> Hubungi Kami : </p>
-              <a href="">
+              <a href="https://wa.me/<?= $data['content'][0]['wa'] ?>?text=">
                 <img src="<?= BASEURL, PORT, LOCATION ?>/img/whatsapp.png" alt="WhatsApp">
               </a>
             </div>
@@ -306,19 +309,19 @@
         <div class="col-md-5">
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/pin-512.png" alt="Maps-Logo" class="float-left">
-            <p>Taman Palem Mutiara Blok B7 no.30 Cengkareng Timur, Jakarta Barat</p>
+            <p><?= $data['content'][0]['alamat'] ?></p>
           </div>
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/email.png" alt="Email-Logo" class="float-left" id="email">
-            <p>kngdjcr43@gmail.com</p>
+            <p><?= $data['content'][0]['email'] ?></p>
           </div>
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/PHONE.png" alt="Phone-Logo" class="float-left">
-            <p>(021-22654327)</p>
+            <p>(<?= $data['content'][0]['notlp'] ?>)</p>
           </div>
           <div class="contact1">
             <img src="<?= BASEURL, PORT, LOCATION ?>/img/003-whatsapp.png" alt="WhatsApp" class="float-left">
-            <p>(+62-12334567891011)</p>
+            <p>(<?= $data['content'][0]['wa'] ?>)</p>
           </div>
         </div>
 
