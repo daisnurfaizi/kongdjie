@@ -56,40 +56,24 @@
   <?php
   // var_dump($data);
   ?>
-  <!-- <div class="card-columns"> -->
-
-  <!-- 
-        <div class="container">
-          <div class="row">    
-          <div class="col-md-3"> 
-            <div class="thumbnail">
-              <img  src = "img/KongDjie_Toraja.png" alt="" class="img-fluid">
-              <div class="card-title">
-                <h4>title 1</h4>
-              </div>
-              <div class="card-text">this is some sample text.this is some sampel text.this is some sampel text</text>
-              <a style="margin-top": 10px href="#" class="btn btn-success">click here</a>
-            </div>
-          </div>
-        </div>  
-      </div> -->
-
-  //pagination
-  //konfigurasi
-  $JumlahDataPerhalaman = 6;
-  $JumlahData = ceil(query ("SELECT * FROM produk"));
-  $JumlahHalaman = $JumlahData / $JumlahDataPerhalaman;
-  $halamanAktif = (isset($_GET["halaman"]) ? $_GET ["halaman"] : 1;
-  $awalData = ( $JumlahDataPerhalaman * $halamanAktif) - $JumlahDataPerhalaman;
-
-
-  $produk = query("SELECT * FROM produk LIMIT 0, $JumlahDataPerhalaman")
-
+      #show_up{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      display: none;
+      }
+     #show_up a{
+      border-bottom: 1px solid #ddd;
+      display: block;
+      padding: 5px;
+     }
+     <input type="text" name="nama_produk" id="Produk2" />
+     <div id="show_up"></div>
   <?php
   $readmore = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit necessitat
   ibus velit eum, tenetur et! Placeat cupiditate quaerat accusamus laboriosam quasi, aliquam architecto, error debitis facere iure rerum nostrum illum!";
   ?>
-  <img src="app/file/img/gawean1.png" class="logo">
+  <!-- <img src="app/file/img/gawean1.png" class="logo"> -->
   <div class="container">
     <div class="row">
       <?php
@@ -105,7 +89,7 @@
           <div class="card">
             <div class="card-body">
               <div class="card-bg">
-                <img src="<?= BASEURL, PORT, LOCATION; ?>/img/<?= $produk['gambar'] ?>" class="card-img-top">
+                <img src="<?= BASEURL, PORT, LOCATION; ?>/img/<?= $produk['gambar'] ?>" style="width:170px height:169px" class="card-img-top">
                 <h5 class="card-title"><?= $produk['nama_produk'] ?></h5>
                 <h6 class="card-deskripsi">
                   <?= substr($produk['deskripsi'], 0, 50) ?>
@@ -132,27 +116,7 @@
       }
       ?>
     </div>
-  </div>
-
-  //navigasi
-
-  </li>
-  </ul>
-  </nav>
-
-
-  <div class="col-md-3">
-    <div class="thumbnail">
-      <div class="card-body">
-        <div class="card-bg">
-          <img src="img/KongDjie_Toraja.png" style="width:170px" class="card-img-top">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
+  </div>  
   </div>
   </div>
   </div>
@@ -162,7 +126,22 @@
 
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+      $(document).ready(function(e){
+      $("#Produk2").keyup(function(){
+        $("#show_up").show();
+        var text = $(this).val();
+        $.ajax({
+          type: 'GET',
+          url: 'Produk2.php',
+          data: 'txt=' + text,
+          success: function(data){
+            $("#show_up").html(data);
+            }
+          });
+       })
+      });
+</script>
 </body>
 
 </html>
