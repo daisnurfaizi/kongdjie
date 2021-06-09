@@ -116,7 +116,7 @@
                 `  <div class="card-body">` +
                 `    <div class="card-text"><center>` + row.nama_produk + `</center></div>` +
                 `    <div class="card-text">Deskripsi : ` + row.deskripsi + `</div>` +
-                `    <div class="card-text">Harga : Rp.` + row.harga + `</div>` +
+                `    <div class="card-text">Harga yyy: Rp.` + row.harga + `</div>` +
                 `  </div>` +
                 `</div>`;
               return html;
