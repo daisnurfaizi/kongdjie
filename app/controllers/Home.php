@@ -21,7 +21,16 @@ class Home extends Controller
 
     public function Produk()
     {
-        $data['produk'] = $this->model('Product_model')->getprodukall();
-        $this->view('home/Produk', $data);
+        // $data = json_encode($this->model('Product_model')->getprodukall());
+
+        $this->view('home/Produk');
+    }
+
+    public function Produkjson()
+    {
+        $data['data'] = $this->model('Product_model')->getprodukall();
+        $json = json_encode($data);
+
+        echo $json;
     }
 }
