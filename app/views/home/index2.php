@@ -8,7 +8,10 @@
 
   <!-- Bootstrap CSS -->
   <!-- <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION ?>/css/bootstrap.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
   <LInk rel="stylesheet" href="<?= BASEURL, PORT, LOCATION ?>/css/style2.css">
   <link rel="icon" type="image/png" href="<?= BASEURL, PORT, LOCATION ?>/img/logo.png">
   <!-- ini dari bulut -->
@@ -165,7 +168,7 @@
                 <p class="card-text"> Rp. <?= $produk['harga'] ?> ,- </p>
               </div>
               <div class="card-footer">
-                <a href="" class="text-muted"> Order Now </a>
+                <a href="<?= $produk['link'] ?>" class="text-muted"> Order Now </a>
               </div>
             </div>
           </div>
@@ -263,7 +266,7 @@
         </div>
       </div>
       <div class="row tekswilayah justify-content-center">
-        <div class="col-4 text-left">
+        <div class="col-4 text-left" style="z-index: 1;">
           <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JABODETABEK">JABODETABEK</a>
           <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JAWA-BARAT">JAWA BARAT</a>
           <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/JAWA-TENGAH">JAWA TENGAH</a>
@@ -280,7 +283,7 @@
           <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/NUSA-TENGARA-TIMUR">NUSA TENGARA TIMUR</a>
           <a class="wilayah1" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/NUSA-TENGARA-BARAT">NUSA TENGARA BARAT</a>
         </div>
-        <div class="col-4 text-right">
+        <div class="col-4 text-right" style="z-index: 1;">
           <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KEPULAUAN-BANGKA-BELITUNG">KEPULAUAN BANGKA BELITUNG</a>
           <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KALIMANTAN-UTARA">KALIMANTAN UTARA</a>
           <a class="wilayah2" href="<?= BASEURL, LOCATION, PORT ?>/Franchise/KALIMANTAN-SELATAN">KALIMANTAN SELATAN</a>
